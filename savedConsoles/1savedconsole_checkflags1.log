@@ -1,0 +1,77 @@
+script.js:207 ////////SECOND TEST\\\\
+script.js:382 Mousedown number:  0 Pressed on time:  445  sek/100, Striked, target count:  0
+script.js:383 All click results  [445]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (2) [445, "notClicked"]
+script.js:382 Mousedown number:  2 Pressed on time:  143  sek/100, Striked, target count:  0
+script.js:383 All click results  (3) [445, "notClicked", 143]
+script.js:382 Mousedown number:  3 Pressed on time:  128  sek/100, Striked, target count:  0
+script.js:383 All click results  (4) [445, "notClicked", 143, 128]
+script.js:382 Mousedown number:  4 Pressed on time:  121  sek/100, Striked, target count:  0
+script.js:383 All click results  (5) [445, "notClicked", 143, 128, 121]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (6) [445, "notClicked", 143, 128, 121, "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (7) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (8) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (9) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (10) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (11) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (12) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (13) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (14) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (15) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (16) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (17) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (18) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (19) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (20) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (21) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (22) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (23) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (24) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (25) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (26) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (27) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (28) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (29) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (30) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (31) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (32) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (33) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (34) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (35) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (36) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (37) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
+script.js:111 miss, target count:  0
+script.js:112 All click results  (38) [445, "notClicked", 143, 128, 121, "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked", "notClicked"]
