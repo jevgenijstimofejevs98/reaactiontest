@@ -87,7 +87,7 @@ function WriteAbout1stTest(){
         ctx.font = "20px Arial";
         ctx.fillStyle = 'rgba(0, 0, 0, 1)';
         ctx.fillText("Pirmajā testā ar kursoru ir jānoklikšķina uz zaļajiem apļiem, ja", 50, 100);
-        ctx.fillText("palaidīsiet garām, tad būs ieskaitīta pabaidīšana.", 50, 150);
+        ctx.fillText("palaidīsiet garām, tad būs ieskaitīts ka merķis ir palaidīts.", 50, 150);
         ctx.fillText("Laiks uz katru mērķī ir ierobežots, ja ne paspēsiet, būs", 50, 200);
         ctx.fillText("ieskaitīts, kā jūs nepaspējat.", 50, 250);
         ctx.fillText("Nospiediet start lai saktu pirmu testu. ", 50, 600);
