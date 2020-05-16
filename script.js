@@ -7,7 +7,7 @@ let output = document.querySelector('#output');
 var c = document.getElementById("output");
 var ctx = c.getContext("2d");
 
-var id = setInterval("FirstTest()", 200);//2000
+var id = setInterval("FirstTest()", 2000);//2000
 var secTest = setInterval("SecondTest()", 3000);//3000
 var thirdTest = setInterval("ThirdTest()", 3000);//3000
 var m = setInterval("stopWatch()", 10); //time = 100, kogda srabativajet funkcija Timer1(), esli u m intervala budet 1 milisekunda to togda time budet 500 (???ograni4enije???)
