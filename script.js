@@ -1364,6 +1364,7 @@ if (makeAllWhite == true){
             secondTest = false;
             thirdTest = false;
             forthTest = true;
+            TestNumber = 4;
 
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255, 255, 255, 1)';
@@ -1659,8 +1660,8 @@ c.addEventListener('mousemove', function(evt) {
             ctx.font = "40px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText("Būs vel četri tādā veida uzdevumi", 50, 50);
-            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
-            ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
+            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 100);
+            ctx.fillText("jo ātrāk, jo labāk.", 50, 150);
             //ctx.fillText(" Nospiediet start lai saktu nākamu testu. ", 5, 330);
 
 
@@ -1760,10 +1761,10 @@ console.log("5555test");
             ctx.fillRect(0, 0, 1600, 900);
         
 
-            ctx.font = "40px Arial";
+            ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
-            ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
+            ctx.fillText("jo ātrāk, jo labāk.", 50, 150);
             //ctx.fillText("Bet tagad vel ja kursors būs ārpus burtai, kura atver", 50, 190);
             //ctx.fillText("drop-down sarakstu, un ārpus drop-down saraksta, šitais drop-down saraksts", 50, 260);
             //ctx.fillText("aizvērsies uzriez (iepriekšējos testos, tikai pēc 0.8 sekundes)", 50, 330);
@@ -1863,7 +1864,7 @@ if (TestNumber == 6 && start == true){
             ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
-            ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
+            ctx.fillText("jo ātrāk, jo labāk.", 50, 150);
 
 
            
@@ -2081,11 +2082,10 @@ document.addEventListener('mousedown', (e) => {
     //callibrate
     console.log("MousePos: " + x + ", " +  y);
     Strikes[mouseDownNumber] = Strike;
-    /*
     ctx.beginPath();
     ctx.fillStyle = 'rgba(0, 0, 255, 1)';
     ctx.arc(x, 900 - y, 3, 0, 2 * Math.PI);
-    ctx.fill();*/
+    ctx.fill();
 
 //ForthTest
     if (start == true && forthTest == true && firstTest == false){
@@ -2307,12 +2307,12 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
         //console.log("y: " + y + " 900 - ySpawn + test9size: " + (900 - ySpawn + test9thSize[v]) + ", " + (900 - ySpawn - test9thSize[v]));
     
 
-/*
+
     ctx.beginPath();
     ctx.fillStyle = 'rgba(0, 0, 255, 1)';
     ctx.arc(x, 900-y, 3, 0, 2 * Math.PI);
     ctx.fill();
-*/
+
     
         
     
@@ -2648,7 +2648,7 @@ if (thirdTest == true){
     document.getElementById("v4").style.display = "block";
     var elmnt1 = document.getElementById("v4");
 }
-if (forthTest == true || TestNumber == 5 || TestNumber == 6 || TestNumber == 7 || TestNumber == 8){
+if (forthTest == true || TestNumber == 4 || TestNumber == 5 || TestNumber == 6 || TestNumber == 7 || TestNumber == 8){
     document.getElementById("v5").style.display = "block";
     var elmnt1 = document.getElementById("v5");
 }
@@ -2659,18 +2659,38 @@ if (forthTest == true || TestNumber == 5 || TestNumber == 6 || TestNumber == 7 |
 document.getElementById("Hide").addEventListener("click", function () {
     if (firstTest == true){
     document.getElementById("v1").style.display = "none";
+    document.getElementById("v2").style.display = "none";
+    document.getElementById("v3").style.display = "none";
+    document.getElementById("v4").style.display = "none";
+    document.getElementById("v5").style.display = "none";
     }
     if (TestNumber == 9){
-        document.getElementById("v2").style.display = "none";
+        document.getElementById("v1").style.display = "none";
+    document.getElementById("v2").style.display = "none";
+    document.getElementById("v3").style.display = "none";
+    document.getElementById("v4").style.display = "none";
+    document.getElementById("v5").style.display = "none";
     }
     if (secondTest == true){
-        document.getElementById("v3").style.display = "none";
+        document.getElementById("v1").style.display = "none";
+    document.getElementById("v2").style.display = "none";
+    document.getElementById("v3").style.display = "none";
+    document.getElementById("v4").style.display = "none";
+    document.getElementById("v5").style.display = "none";
     }
     if (thirdTest == true){
+        document.getElementById("v1").style.display = "none";
+        document.getElementById("v2").style.display = "none";
+        document.getElementById("v3").style.display = "none";
         document.getElementById("v4").style.display = "none";
-    }
-    if (forthTest == true || TestNumber == 5 || TestNumber == 6 || TestNumber == 7 || TestNumber == 8){
         document.getElementById("v5").style.display = "none";
+    }
+    if (forthTest == true || TestNumber == 4 || TestNumber == 5 || TestNumber == 6 || TestNumber == 7 || TestNumber == 8){
+        document.getElementById("v1").style.display = "none";
+    document.getElementById("v2").style.display = "none";
+    document.getElementById("v3").style.display = "none";
+    document.getElementById("v4").style.display = "none";
+    document.getElementById("v5").style.display = "none";
     }
     
 });
