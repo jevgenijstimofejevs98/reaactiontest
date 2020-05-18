@@ -810,6 +810,12 @@ if (time8 == 1500 && TestNumber == 8){
     */
    console.log("EighthTest : " + time8);
     registredForthTest = true;
+    registredForthTest = true;
+            firstTest = false;
+            TestNumber = 0;
+
+            start = false;
+            makeAllWhite = true;
 
     start = false;
     makeAllWhite = true;
