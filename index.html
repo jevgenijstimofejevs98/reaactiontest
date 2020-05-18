@@ -11,6 +11,28 @@
             height: 900px;
             border: 2px solid red;
         }
+
+        .button {
+            cursor: pointer;
+  
+}
+
+.button1 
+{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  margin: -600px 0px;
+  } /* Green */
+  .button2 {background-color: blue; color: white; border: none;}
+
     </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,13 +41,54 @@
 </head>
 <body>
     <!-- <canvas> id = 'a' widht="1600" height = "900"  </canvas> -->
-    <canvas width="1600" height="900" id="output" style="text-align: center"></canvas>
     
-    <button id="draw trajectory">Draw trajectory</button>
+<div>
+
+    <canvas width="1600" height="900" id="output" style="text-align: center">
+        
+        </canvas>
+    
+    <button class="button button1" id="Start">Start</button>
+    
+    <br>
+    
+    <button  id="draw trajectory">Draw trajectory</button>
     <button id="Clear console">Clear console</button>
-    <button id="Start">Start</button>
-    <button id="Save">Save</button>
     
+    <button class="button button2" id="Save">Save</button>
+    <button class="button button2" id="Show">Show video</button>
+    <button class="button button2" id="Hide">Hide video</button>
+    <br>
+    <br>
+    <button hidden class="button button1" id="a">Save</button>
+    <div>
+    <video  id="v1" width="800" controls >
+        <source src="videos/demonstr.mp4" type="video/mp4">
+            <source src="videos/demonstr.ogg" type="video/ogg">
+            </div>
+            <div>
+    <video  id="v2" width="800" controls >
+            <source src="videos/demonstr2.mp4" type="video/mp4">
+    </div>
+        <video  id="v3" width="800" controls >
+            <source src="videos/demonstr3.mp4" type="video/mp4">
+    </div>
+</div>
+<video  id="v4" width="800" controls >
+    <source src="videos/demonstr4.mp4" type="video/mp4">
+</div>
+</div>
+<video  id="v5" width="800" controls >
+    <source src="videos/demonstr5.mp4" type="video/mp4">
+</div>
+</div>
+    
+ <script>
+    document.getElementById("draw trajectory").style.display = "none";
+    document.getElementById("Clear console").style.display = "none";
+    document.getElementById("a").style.visibility = "hidden";
+    </script>
+
     <script src="script.js"></script>
     <script src="FileSaver.js"></script>
     <script src="MenuBars.js"></script>
