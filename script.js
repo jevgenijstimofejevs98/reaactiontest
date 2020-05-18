@@ -813,7 +813,7 @@ if (time8 == 1500 && TestNumber == 8){
 
     start = false;
     makeAllWhite = true;
-    TestNumber = 9;
+    TestNumber = 0;
     v = 0;
 
     ctx.beginPath();
