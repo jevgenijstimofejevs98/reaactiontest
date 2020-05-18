@@ -2626,6 +2626,8 @@ document.getElementById("Save").addEventListener("click", function () {
 document.getElementById("v1").style.display = "none";
 document.getElementById("v2").style.display = "none";
 document.getElementById("v3").style.display = "none";
+document.getElementById("v4").style.display = "none";
+document.getElementById("v5").style.display = "none";
 
 
 document.getElementById("Show").addEventListener("click", function () {
