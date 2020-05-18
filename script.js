@@ -1658,6 +1658,7 @@ c.addEventListener('mousemove', function(evt) {
            
             ctx.font = "40px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
+            ctx.fillText("Būs vel četri tādā veida uzdevumi", 50, 50);
             ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
             ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
             //ctx.fillText(" Nospiediet start lai saktu nākamu testu. ", 5, 330);
