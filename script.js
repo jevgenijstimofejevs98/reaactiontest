@@ -827,12 +827,13 @@ if (time8 == 1500 && TestNumber == 8){
     ctx.fillRect(0, 0, 1600, 900);
 
 
-    ctx.font = "70px Arial";
+    ctx.font = "50px Arial";
     ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-    ctx.fillText("Pēdējais tests būs tāds", 50, 100);
-    ctx.fillText("pats, ka pirmais,", 50, 200);
-    ctx.fillText("tikai apļam būs dažādi izmērī. ", 50, 300);
-    ctx.fillText("Nospiediet start lai saktu pēdēju testu. ", 5, 400);
+    ctx.fillText(" ", 50, 50);
+    ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
+    ctx.fillText("uzspīediet uz pogu Save, un atsūtiet", 50, 250);
+    ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
+
 
     console.log("EightTest: " + time8);
     registredForthTest = true;
@@ -2066,7 +2067,7 @@ if (TestNumber == 8 && start == true){
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText(" ", 50, 50);
             ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
-            ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
+            ctx.fillText("uzspīediet uz pogu Save, un atsūtiet", 50, 250);
             ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
 
             
