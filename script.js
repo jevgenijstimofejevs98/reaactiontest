@@ -7,7 +7,9 @@ let output = document.querySelector('#output');
 var c = document.getElementById("output");
 var ctx = c.getContext("2d");
 
-var id = setInterval("FirstTest()", 2000);//2000
+var id = setInterval("FirstTest()", 4000);//2000
+var joj = 397;
+
 var secTest = setInterval("SecondTest()", 3000);//3000
 var thirdTest = setInterval("ThirdTest()", 3000);//3000
 var m = setInterval("stopWatch()", 10); //time = 100, kogda srabativajet funkcija Timer1(), esli u m intervala budet 1 milisekunda to togda time budet 500 (???ograni4enije???)
@@ -66,6 +68,7 @@ var firstTest = true;///true
 
 
 //firstTest = false;/////delete
+//forthTest = true;
 var TestNumber = 0;//0
 
 //var functionforDubug = setInterval("IntervFuncForDebug()", 250);
@@ -86,13 +89,31 @@ function WriteAbout1stTest(){
     if (one == true){
         ctx.font = "20px Arial";
         ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-        ctx.fillText("Pirmajā testā ar kursoru ir jānoklikšķina uz zaļajiem apļiem, ja", 50, 100);
-        ctx.fillText("palaidīsiet garām, tad būs ieskaitīts ka merķis ir palaidīts.", 50, 150);
-        ctx.fillText("Laiks uz katru mērķī ir ierobežots, ja ne paspēsiet, būs", 50, 200);
-        ctx.fillText("ieskaitīts, kā jūs nepaspējat.", 50, 250);
-        ctx.fillText("Nospiediet start lai saktu pirmu testu. ", 50, 600);
+        ctx.fillText("Pirmajā testā ar kursoru ir jānoklikšķina uz zaļajiem apļiem, jo", 50, 100);
+        ctx.fillText("ātrāk, jo labāk.", 50, 150);
+        ctx.fillText("Nospiediet start lai saktu pirmu testu. ", 50, 250);
+        ctx.fillText("Turiet Ctrl un nomēriet ar peles riteni tā, lai sarkanā rāmī un sākuma poga būtu redzama.", 50, 200);
+        ctx.fillText("Spiediet pogu show video lai uzzinātu vairāk.", 50, 300);
 
+        document.addEventListener('DOMContentLoaded', function(){
+            var v1 = document.querySelector('#v1');
+            var canvas1 = document.querySelector('#output');
 
+            v1.addEventListener('loadedmetadata', function()
+            {
+                canvas1.width = this.videoWidth;
+                canvas1.height = this.videoHeight;
+            });
+
+            var draw = function() {
+                canvas1.getContext('2d').drawImage(v1, 0, 0);
+            }
+
+            v1.addEventListener('play', function(){
+                    if (v1.paused || v1.ended) return;
+                    draw();
+            });
+        });
 
         one = false;
     }
@@ -128,9 +149,11 @@ function stopWatch() {
     if (start == true && secondTest == false && thirdTest == false && firstTest == true) {
     time++
     //bilo if(time == 200) iz-za etogo ne vsegda sla regestracija
+
+    //if (id == setInterval("FirstTest()", 4000))
     if (targetCount > 0)
     if (firstCycle == 1)
-    if (time>197) {
+    if (time>joj) {
 
         
 
@@ -147,12 +170,16 @@ function stopWatch() {
         
 
         }
+
+       
     firstCycle = 1;
     }
 
+    
+
     if (start == true && secondTest == true && thirdTest == false) {
         time++
-        
+       
         
         if (counter > 1)
         //if (targetCount > 0)
@@ -248,7 +275,8 @@ function stopWatch() {
 
 //console.log("menuBarlvl " + menuBarLevel + "MaxLevel " + MaxDropDownListLevel);
             if (menuBarLevel == 2 && MaxDropDownListLevel == menuBarLevel)
-            if(x < 61 && x > 0 && y < 875 && y > 855 || x < 110 && x > 60 && y > 775 && y < 875){listCloseTimer = 0; cursorIsOutside = false;}
+            //if(x < 61 && x > 0 && y < 875 && y > 855 || x < 110 && x > 60 && y > 775 && y < 875){listCloseTimer = 0; cursorIsOutside = false;}
+            if(x < 46 && x > 0 && y < 875-36 && y > 855-36 || x < 110-8 && x > 60-15 && y > 775-36 && y < 875-36){listCloseTimer = 0; cursorIsOutside = false;}
             else{
                 //listCloseTimer++;
                 cursorIsOutside = true;
@@ -270,7 +298,7 @@ function stopWatch() {
         }
 //11111(bookmark(ctrl-F))
         if (menuBarLevel == 3 && MaxDropDownListLevel == menuBarLevel)
-    if(x < 160 && x > 60 && y < 815 && y > 795 || x < 160 && x > 110 && y > 715 && y < 815){listCloseTimer = 0;  cursorIsOutside = false;}
+    if(x < 160-10 && x > 60-10 && y < 815-36 && y > 795-36 || x < 160-8 && x > 110-10 && y > 715-36 && y < 815-36){listCloseTimer = 0;  cursorIsOutside = false;}
     else{
         cursorIsOutside = true;
         //listCloseTimer++;
@@ -292,7 +320,7 @@ function stopWatch() {
     }
     //
     if (menuBarLevel == 4 && MaxDropDownListLevel == menuBarLevel)
-    if(x < 210 && x > 110 && y < 735 && y > 715 || x < 210 && x > 160 && y > 635 && y < 735){listCloseTimer = 0; cursorIsOutside = false;}
+    if(x < 210-10 && x > 110-10 && y < 735-36 && y > 715-36 || x < 210-8 && x > 160-10 && y > 635-36 && y < 735-36){listCloseTimer = 0; cursorIsOutside = false;}
     else{
         cursorIsOutside = true;
         //listCloseTimer++;
@@ -314,7 +342,7 @@ function stopWatch() {
     }
     //
     if (menuBarLevel == 5 && MaxDropDownListLevel == menuBarLevel)
-    if(x < 260 && x > 160 && y < 715 && y > 695 || x < 260 && x > 210 && y > 615 && y < 715){listCloseTimer = 0; cursorIsOutside = false;}
+    if(x < 260-10 && x > 160-10 && y < 715-36 && y > 695-36 || x < 260-8 && x > 210-10 && y > 615-36 && y < 715-36){listCloseTimer = 0; cursorIsOutside = false;}
     else{
         //listCloseTimer++;
         cursorIsOutside = true;
@@ -357,7 +385,7 @@ if (start == true && TestNumber == 5) {
 
 //console.log("menuBarlvl " + menuBarLevel + "MaxLevel " + MaxDropDownListLevel);
     if (menuBarLevel == 2)
-    if(x < 61 && x > 0 && y < 875 && y > 855 || x < 110 && x > 60 && y > 775 && y < 875){listCloseTimer = 0; cursorIsOutside = false;}
+    if(x < 61-10 && x > 0 && y < 875-36 && y > 855-36 || x < 110-8 && x > 60-10 && y > 775-36 && y < 875-36){listCloseTimer = 0; cursorIsOutside = false;}
     else{
         //listCloseTimer++;
         cursorIsOutside = true;
@@ -379,7 +407,7 @@ if (start == true && TestNumber == 5) {
 }
 //11111(bookmark(ctrl-F))
 if (menuBarLevel == 3)
-if(x < 160 && x > 60 && y < 815 && y > 795 || x < 160 && x > 110 && y > 715 && y < 815){listCloseTimer = 0;  cursorIsOutside = false;}
+if(x < 160-10 && x > 60-10 && y < 815-36 && y > 795-36 || x < 160-8 && x > 110-10 && y > 715-36 && y < 815-36){listCloseTimer = 0;  cursorIsOutside = false;}
 else{
 cursorIsOutside = true;
 //listCloseTimer++;
@@ -401,7 +429,7 @@ ctx.beginPath();
 }
 //
 if (menuBarLevel == 4)
-if(x < 210 && x > 110 && y < 735 && y > 715 || x < 210 && x > 160 && y > 635 && y < 735){listCloseTimer = 0; cursorIsOutside = false;}
+if(x < 210-10 && x > 110-10 && y < 735-36 && y > 715-36 || x < 210-8 && x > 160-10 && y > 635-36 && y < 735-36){listCloseTimer = 0; cursorIsOutside = false;}
 else{
 cursorIsOutside = true;
 //listCloseTimer++;
@@ -423,7 +451,7 @@ ctx.beginPath();
 }
 //
 if (menuBarLevel == 5)
-if(x < 260 && x > 160 && y < 715 && y > 695 || x < 260 && x > 210 && y > 615 && y < 715){listCloseTimer = 0; cursorIsOutside = false;}
+if(x < 260-10 && x > 160-10 && y < 715-36 && y > 695-36 || x < 260-8 && x > 210-10 && y > 615-36 && y < 715-36){listCloseTimer = 0; cursorIsOutside = false;}
 else{
 //listCloseTimer++;
 cursorIsOutside = true;
@@ -468,7 +496,7 @@ if (start == true && TestNumber == 6) {
 
 //console.log("menuBarlvl " + menuBarLevel + "MaxLevel " + MaxDropDownListLevel);
     if (menuBarLevel == 2)
-    if(x < 61 && x > 0 && y < 875 && y > 855 || x < 110 && x > 60 && y > 775 && y < 875){listCloseTimer = 0; cursorIsOutside = false;}
+    if(x < 61-10 && x > 0 && y < 875-36 && y > 855-36 || x < 110-8 && x > 60-10 && y > 775-36 && y < 875-36){listCloseTimer = 0; cursorIsOutside = false;}
     else{
         //listCloseTimer++;
         cursorIsOutside = true;
@@ -490,7 +518,7 @@ if (start == true && TestNumber == 6) {
 }
 //11111(bookmark(ctrl-F))
 if (menuBarLevel == 3)
-if(x < 160 && x > 60 && y < 815 && y > 795 || x < 160 && x > 110 && y > 715 && y < 815){listCloseTimer = 0;  cursorIsOutside = false;}
+if(x < 160-10 && x > 60-10 && y < 815-36 && y > 795-36 || x < 160-8 && x > 110-10 && y > 715-36 && y < 815-36){listCloseTimer = 0;  cursorIsOutside = false;}
 else{
 cursorIsOutside = true;
 //listCloseTimer++;
@@ -512,7 +540,7 @@ ctx.beginPath();
 }
 //
 if (menuBarLevel == 4)
-if(x < 210 && x > 110 && y < 735 && y > 715 || x < 210 && x > 160 && y > 635 && y < 735){listCloseTimer = 0; cursorIsOutside = false;}
+if(x < 210-10 && x > 110-10 && y < 735-36 && y > 715-36 || x < 210-8 && x > 160-10 && y > 635-36 && y < 735-36){listCloseTimer = 0; cursorIsOutside = false;}
 else{
 cursorIsOutside = true;
 //listCloseTimer++;
@@ -534,7 +562,7 @@ ctx.beginPath();
 }
 //
 if (menuBarLevel == 5)
-if(x < 260 && x > 160 && y < 715 && y > 695 || x < 260 && x > 210 && y > 615 && y < 715){listCloseTimer = 0; cursorIsOutside = false;}
+if(x < 260-10 && x > 160-10 && y < 715-36 && y > 695-36 || x < 260-8 && x > 210-10 && y > 615-36 && y < 715-36){listCloseTimer = 0; cursorIsOutside = false;}
 else{
 //listCloseTimer++;
 cursorIsOutside = true;
@@ -576,7 +604,7 @@ if (start == true && TestNumber == 7) {
 
 //console.log("menuBarlvl " + menuBarLevel + "MaxLevel " + MaxDropDownListLevel);
     if (menuBarLevel == 2)
-    if(x < 111 && x > 0 && y < 875 && y > 855 || x < 210 && x > 110 && y > 775 && y < 875){listCloseTimer = 0; cursorIsOutside = false;}
+    if(x < 111-10 && x > 0 && y < 875-36 && y > 855-36 || x < 210-8 && x > 110-10 && y > 775-36 && y < 875-36){listCloseTimer = 0; cursorIsOutside = false;}
     else{
         //listCloseTimer++;
         cursorIsOutside = true;
@@ -598,7 +626,7 @@ if (start == true && TestNumber == 7) {
 }
 //11111(bookmark(ctrl-F))
 if (menuBarLevel == 3)
-if(x < 210 && x > 110 && y < 815 && y > 795 || x < 310 && x > 208 && y > 715 && y < 815){listCloseTimer = 0;  cursorIsOutside = false;}
+if(x < 210-10 && x > 110-10 && y < 815-36 && y > 795-36 || x < 310-8 && x > 208-10 && y > 715-36 && y < 815-36){listCloseTimer = 0;  cursorIsOutside = false;}
 else{
 cursorIsOutside = true;
 //listCloseTimer++;
@@ -620,7 +648,7 @@ ctx.beginPath();
 }
 //
 if (menuBarLevel == 4)
-if(x < 410 && x > 210 && y < 735 && y > 715 || x < 410 && x > 310 && y > 635 && y < 735){listCloseTimer = 0; cursorIsOutside = false;}
+if(x < 410-10 && x > 210-10 && y < 735-36 && y > 715-36 || x < 410-8 && x > 310-10 && y > 635-36 && y < 735-36){listCloseTimer = 0; cursorIsOutside = false;}
 else{
 cursorIsOutside = true;
 //listCloseTimer++;
@@ -642,7 +670,7 @@ ctx.beginPath();
 }
 //
 if (menuBarLevel == 5)
-if(x < 510 && x > 310 && y < 715 && y > 695 || x < 510 && x > 410 && y > 615 && y < 715){listCloseTimer = 0; cursorIsOutside = false;}
+if(x < 510-10 && x > 310-10 && y < 715-36 && y > 695-36 || x < 510-8 && x > 410-10 && y > 615-36 && y < 715-36){listCloseTimer = 0; cursorIsOutside = false;}
 else{
 //listCloseTimer++;
 cursorIsOutside = true;
@@ -684,7 +712,7 @@ if (start == true && TestNumber == 8) {
 
 //console.log("menuBarlvl " + menuBarLevel + "MaxLevel " + MaxDropDownListLevel);
     if (menuBarLevel == 2)
-    if(x < 111 && x > 0 && y < 908 && y > 894 || x < 210 && x > 110 && y > 854 && y < 908){listCloseTimer = 0; cursorIsOutside = false;}
+    if(x < 111-10 && x > 0 && y < 908-38 && y > 894-36 || x < 210-8 && x > 110-10 && y > 854-38 && y < 908-34){listCloseTimer = 0; cursorIsOutside = false;}
     else{
         //listCloseTimer++;
         cursorIsOutside = true;
@@ -706,7 +734,7 @@ if (start == true && TestNumber == 8) {
 }
 //11111(bookmark(ctrl-F))
 if (menuBarLevel == 3)
-if(x < 210 && x > 110 && y < 878 && y > 864 || x < 310 && x > 208 && y > 824 && y < 878){listCloseTimer = 0;  cursorIsOutside = false;}
+if(x < 210-10 && x > 110-10 && y < 878-38 && y > 864-36 || x < 310-8 && x > 208-10 && y > 824-36 && y < 878-38){listCloseTimer = 0;  cursorIsOutside = false;}
 else{
 cursorIsOutside = true;
 //listCloseTimer++;
@@ -728,7 +756,7 @@ ctx.beginPath();
 }
 //
 if (menuBarLevel == 4)
-if(x < 410 && x > 210 && y < 838 && y > 824 || x < 410 && x > 310 && y > 784 && y < 838){listCloseTimer = 0; cursorIsOutside = false;}
+if(x < 410-10 && x > 210-10 && y < 838-38 && y > 824-36 || x < 410-8 && x > 310-10 && y > 784-36 && y < 838-38){listCloseTimer = 0; cursorIsOutside = false;}
 else{
 cursorIsOutside = true;
 //listCloseTimer++;
@@ -750,7 +778,7 @@ ctx.beginPath();
 }
 //
 if (menuBarLevel == 5)
-if(x < 510 && x > 310 && y < 828 && y > 814 || x < 510 && x > 410 && y > 774 && y < 828){listCloseTimer = 0; cursorIsOutside = false;}
+if(x < 510-10 && x > 310-10 && y < 828-38 && y > 814-36 || x < 510-8 && x > 410-10 && y > 774-36 && y < 828-38){listCloseTimer = 0; cursorIsOutside = false;}
 else{
 //listCloseTimer++;
 cursorIsOutside = true;
@@ -826,11 +854,65 @@ var SaveSpawnY = [];
 var SaveCursorX = [];
 var SaveCursorY = [];
 var v = 0;
+var calibrate = 0;
 
 var makeAllWhite = true;
 function FirstTest() {
 
     if (start == true && secondTest == false && thirdTest == false && firstTest == true) {
+
+if (calibrate < 4){
+
+if (calibrate == 0){
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+    ctx.fillRect(0, 0, 1600, 900);
+
+ctx.beginPath();
+ctx.fillStyle = 'rgba(0, 255, 0, 1)';
+ctx.arc(15, 15, 15, 0, 2 * Math.PI);
+ctx.fill();
+}
+if (calibrate == 1){
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+    ctx.fillRect(0, 0, 1600, 900);
+
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(0, 255, 0, 1)';
+    ctx.arc(1585, 885, 15, 0, 2 * Math.PI);
+    ctx.fill();
+    }
+    if (calibrate == 2){
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+        ctx.fillRect(0, 0, 1600, 900);
+
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(0, 255, 0, 1)';
+        ctx.arc(15, 15, 15, 0, 2 * Math.PI);
+        ctx.fill();
+        }
+        if (calibrate == 3){
+            ctx.beginPath();
+            ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+            ctx.fillRect(0, 0, 1600, 900);
+
+            ctx.beginPath();
+            ctx.fillStyle = 'rgba(0, 255, 0, 1)';
+            ctx.arc(1585, 885, 15, 0, 2 * Math.PI);
+            ctx.fill();
+
+            clearInterval(id);
+            id = setInterval("FirstTest()", 2000);
+            joj = 197;
+            }
+time = 0;
+calibrate++;
+}
+else {
+    calibrate++;
+
 
 
         if (makeAllWhite == true){
@@ -885,7 +967,9 @@ function FirstTest() {
         time = 0;
         if (counter == 11) {
             start = false;
-            forthTest = true;
+            forthTest = false;
+            //secondTest = true;
+            TestNumber = 9;
 
             SaveSpawnX[v] = "firstTestEnded";
             SaveSpawnY[v] = "firstTestEnded";
@@ -899,20 +983,17 @@ function FirstTest() {
             ctx.arc(prevxSpawn, prevySpawn, 16, 0, 2 * Math.PI);
             ctx.fill();
 
-            ctx.font = "50px Arial";
+            ctx.font = "40px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākama testā jums ar menu bar palīdzību un ", 50, 50);
-            ctx.fillText("drop-down sarakstiem jāsaliek vārdu TIMER.", 50, 150);
-            ctx.fillText("Kad kursors būs uz pēdējās burtas, šitais uzdevums būs pabeigts.", 50, 250);
-            ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 5, 350);
+            ctx.fillText("Nakamis tests būs tāds, pats", 50, 100);
+            ctx.fillText("tikai apļam būs dažādi izmērī. ", 50, 200);
+            ctx.fillText("Atkal spidiet start lai saktu nākamu testu. ", 50, 300);
+            ctx.fillText("Par katru uzdevumu ir video, spideiet show video.", 50, 400);
 
 
-            var eximg12 = document.getElementById("img12example");
-            //img.src = '/webpages_screenshots/meklešnas_lauks.png';
-            ctx.drawImage(eximg12, 700, 450, 238, 267);
-            ctx.font = "60px Arial";
-            ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Tā tas viss izskatīsies. ", 500, 850);
+           
+            v = 0;
+           
 
 
             counter = 0;
@@ -926,6 +1007,7 @@ function FirstTest() {
 
         }
     }
+}
 }
 
 var prevxSpawn2 = []
@@ -1033,7 +1115,7 @@ function SecondTest() {
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText("Nākamais tests izvadās jums web lapaspusēs.", 10, 350);
             ctx.fillText("Jums jānoklikšķina uz meklēšanas lauka (ievade meklēšanai). ", 10, 450);
-            ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 10, 550);
+            //ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 10, 550);
             //var img = new Image();
             var eximg = document.getElementById("img1example");
             //img.src = '/webpages_screenshots/meklešnas_lauks.png';
@@ -1142,6 +1224,7 @@ function NinghthTest() {
         if (counter == 11) {
             start = false;
             TestNumber = 10;
+            secondTest = true;
 
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255, 255, 255, 1)';
@@ -1149,12 +1232,13 @@ function NinghthTest() {
             ctx.arc(prevxSpawn, prevySpawn, test9thSize[v], 0, 2 * Math.PI);
             ctx.fill();
 
-            ctx.font = "50px Arial";
+            
+
+            ctx.font = "55px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText(" ", 50, 50);
-            ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
-            ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
-            ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
+            ctx.fillText("Nākama tests izvadās jums astoņus aplīšus.", 10, 350);
+            ctx.fillText("Jums jānospiež uz aplītī ar ‘+’. ", 10, 450);
+            //ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 10, 550);
 
 
 
@@ -1188,10 +1272,11 @@ if (makeAllWhite == true){
     }
 
 
+    //3232
 
-
-
-        counter++;
+        //counter = 10;
+        
+    counter++;
         
 
         oneTimePressSearch = false;
@@ -1278,32 +1363,37 @@ if (makeAllWhite == true){
             start = false;
             secondTest = false;
             thirdTest = false;
+            forthTest = true;
 
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255, 255, 255, 1)';
             ctx.fillRect(0, 0, 1600, 900);
         
 
-            ctx.font = "60px Arial";
+            
+            ctx.font = "20px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākama testā atkal jums ar menu bar palīdzību un ", 50, 50);
-            ctx.fillText("drop-down sarakstiem jāsaliek vārdu TIMER,.", 50, 120);
-            ctx.fillText("bet tagad ja kursors bus arpus saraksta", 50, 190);
-            ctx.fillText("visi sarkasti bus aizverti", 50, 260);
-            ctx.fillText(" Nospiediet start lai saktu nākamu testu. ", 5, 330);
+            ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 200);
+            ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
+            ctx.fillText("uz pastu brownsky98@gmail.com", 50, 300);
+            ctx.fillText("Vai spidiet pogu start lai izdarītu", 50, 350);
+            ctx.fillText("papild testus.", 50, 400);
+            ctx.fillText("Nākama testā jums jasaliek vārdu TIMER,", 50, 450);
+            ctx.fillText("jo ātrāk, jo labāk.", 50, 500);
+           // ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 5, 350);
 
 
-            var eximg12 = document.getElementById("img12example");
-            //img.src = '/webpages_screenshots/meklešnas_lauks.png';
-            ctx.drawImage(eximg12, 700, 450, 238, 267);/*
-            ctx.font = "60px Arial";
-            ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Tā tas viss izskatīsies. ", 500, 850);*/
+           
+
+
+
+
+
             counter = 0;
             time = 0;
             makeAllWhite = true;
             mouseDownNumber++;
-            TestNumber = 5;
+            //TestNumber = 5;
 
 
             times[mouseDownNumber] = "third test ended.     \n";
@@ -1384,24 +1474,41 @@ function BackToBegining (){
 //ctx.moveTo(0, 0);
 var x;
 var y;
-document.addEventListener('mousemove', (e) => {
-    x = e.pageX;
 
+
+    function getMousePos(c, evt) {
+        var rect = c.getBoundingClientRect();
+        return {
+          XX: evt.clientX - rect.left,
+          YY: evt.clientY - rect.top
+        };
+      }
+  
+
+c.addEventListener('mousemove', function(evt) {
+    var mousePos = getMousePos(c, evt);
+    //x = e.pageX;
+    x = mousePos.XX;
     var body = document.body;
     var html = document.documentElement;
     //page height
     var height = Math.max(body.scrollHeight, body.offsetHeight,
         html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-    y = height - e.pageY;
+    //y = height - e.pageY;
+    y = 900 - mousePos.YY;
+    
+
+ 
+
     //var coor = "X: " + x + ", Y: " + y;
     //drawDot(pos, radius, color)
 
  
 
 
-    if (x > 7 && y > 49 && x < 1609 && y < 951) {
-    output.innerText = `X: ${x - 8} - Y: ${y - 50}`;
+    /*if (x > 7 && y > 49 && x < 1609 && y < 951) {
+    output.innerText = `X: ${x - 8} - Y: ${y - 50}`;*/
         
         coordsX[numb] = x;
         coordsY[numb] = y;
@@ -1412,8 +1519,8 @@ document.addEventListener('mousemove', (e) => {
         ctx.beginPath();
         ctx.arc(50+numb, 100-numb, 1, 0, 2 * Math.PI);
         ctx.fill();
-        */
-    }
+        
+    }*/
 
     
     if (start == true && forthTest == true && firstTest == false && menuBarOneTime == true){
@@ -1475,7 +1582,7 @@ document.addEventListener('mousemove', (e) => {
     
 
     if (menuBarLevel == 1)
-    if(x < 61 && x > 0 && y < 875 && y > 855){
+    if(x < 61-8 && x > 0 && y < 875-36 && y > 855-36){
         SecondBarMenu();
         menuBarLevel = 2;
 
@@ -1489,7 +1596,7 @@ document.addEventListener('mousemove', (e) => {
     
 
     if (menuBarLevel == 2)
-    if(x < 110 && x > 60 && y > 795 && y < 815){
+    if(x < 110-8 && x > 60-10 && y > 795-36 && y < 815-36){
         ThirdBarMenu();
         menuBarLevel = 3;
         MaxDropDownListLevel = menuBarLevel;
@@ -1499,7 +1606,7 @@ document.addEventListener('mousemove', (e) => {
     
 
     if (menuBarLevel == 3)
-    if(x < 160 && x > 110 && y > 715 && y < 735){
+    if(x < 160-8 && x > 110-10 && y > 715-36 && y < 735-36){
         ForthBarMenu();
         menuBarLevel = 4;
         MaxDropDownListLevel = menuBarLevel;
@@ -1509,7 +1616,7 @@ document.addEventListener('mousemove', (e) => {
     
 
     if (menuBarLevel == 4)
-    if(x < 210 && x > 160 && y > 695 && y < 715){
+    if(x < 210-8 && x > 160-10 && y > 695-36 && y < 715-36){
         FifthBarMenu();
         menuBarLevel = 5;
         MaxDropDownListLevel = menuBarLevel;
@@ -1520,7 +1627,7 @@ document.addEventListener('mousemove', (e) => {
         if(menuBarLevel == 5 && registredForthTest == false){
             
         
-        if (x < 260 && x > 210 && y < 715 && y > 695){
+        if (x < 260-8 && x > 210-10 && y < 715-36 && y > 695-36){
             console.log("CHECKFORTHTESTEND " + x + " y= " + y + " menubarlvl= " + menuBarLevel);
             /*
             mouseDownNumber++;
@@ -1534,7 +1641,8 @@ document.addEventListener('mousemove', (e) => {
             registredForthTest = true;
 
             forthTest = false;
-            secondTest = true;
+            secondTest = false;
+            TestNumber = 5;
             start = false;
             makeAllWhite = true;
             menuBarOneTime = true;
@@ -1545,11 +1653,17 @@ document.addEventListener('mousemove', (e) => {
             ctx.fillRect(0, 0, 1600, 900);
         
 
-            ctx.font = "55px Arial";
+            
+
+           
+            ctx.font = "40px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākama tests izvadās jums astoņus aplīšus.", 10, 350);
-            ctx.fillText("Jums jānospiež uz aplītī ar ‘+’. ", 10, 450);
-            ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 10, 550);
+            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
+            ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
+            //ctx.fillText(" Nospiediet start lai saktu nākamu testu. ", 5, 330);
+
+
+            
         }
     }
 
@@ -1593,28 +1707,28 @@ console.log("5555test");
 
 
     if (menuBarLevel == 1)
-    if(x < 61 && x > 0 && y < 875 && y > 855){
+    if(x < 61-8 && x > 0 && y < 875-36 && y > 855-36){
         SecondBarMenu();
         menuBarLevel = 2;
    
     }
 
     if (menuBarLevel == 2)
-    if(x < 110 && x > 60 && y > 795 && y < 815){
+    if(x < 110-8 && x > 60-10 && y > 795-36 && y < 815-36){
         ThirdBarMenu();
         menuBarLevel = 3;
   
     }
 
     if (menuBarLevel == 3)
-    if(x < 160 && x > 110 && y > 715 && y < 735){
+    if(x < 160-8 && x > 110-10 && y > 715-36 && y < 735-36){
         ForthBarMenu();
         menuBarLevel = 4;
    
     }
 
     if (menuBarLevel == 4)
-    if(x < 210 && x > 160 && y > 695 && y < 715){
+    if(x < 210-8 && x > 160-10 && y > 695-36 && y < 715-36){
         FifthBarMenu();
         menuBarLevel = 5;
     }
@@ -1622,7 +1736,7 @@ console.log("5555test");
         if(menuBarLevel == 5 && registredForthTest == true){
             
         
-        if (x < 260 && x > 210 && y < 715 && y > 695){
+        if (x < 260-8 && x > 210-10 && y < 715-36 && y > 695-36){
             console.log("CHECKFORTHTESTEND " + x + " y= " + y + " menubarlvl= " + menuBarLevel);
             /*
             mouseDownNumber++;
@@ -1647,17 +1761,15 @@ console.log("5555test");
 
             ctx.font = "40px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākama testā ari jums ar menu bar palīdzību un ", 50, 50);
-            ctx.fillText("drop-down sarakstiem jāsaliek vārdu TIMER,.", 50, 120);
-            ctx.fillText("Bet tagad vel ja kursors būs ārpus burtai, kura atver", 50, 190);
-            ctx.fillText("drop-down sarakstu, un ārpus drop-down saraksta, šitais drop-down saraksts", 50, 260);
-            ctx.fillText("aizvērsies uzriez (iepriekšējos testos, tikai pēc 0.8 sekundes)", 50, 330);
-            ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 50, 400);
+            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
+            ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
+            //ctx.fillText("Bet tagad vel ja kursors būs ārpus burtai, kura atver", 50, 190);
+            //ctx.fillText("drop-down sarakstu, un ārpus drop-down saraksta, šitais drop-down saraksts", 50, 260);
+            //ctx.fillText("aizvērsies uzriez (iepriekšējos testos, tikai pēc 0.8 sekundes)", 50, 330);
+            //ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 50, 400);
 
 
-            var eximg12 = document.getElementById("img12example");
-            //img.src = '/webpages_screenshots/meklešnas_lauks.png';
-            ctx.drawImage(eximg12, 700, 450, 238, 267);
+           
         }
     }
 }
@@ -1697,28 +1809,28 @@ if (TestNumber == 6 && start == true){
 
 
     if (menuBarLevel == 1)
-    if(x < 61 && x > 0 && y < 875 && y > 855){
+    if(x < 61-8 && x > 0 && y < 875-36 && y > 855-36){
         SecondBarMenu();
         menuBarLevel = 2;
    
     }
 
     if (menuBarLevel == 2)
-    if(x < 110 && x > 60 && y > 795 && y < 815){
+    if(x < 110-8 && x > 60-10 && y > 795-36 && y < 815-36){
         ThirdBarMenu();
         menuBarLevel = 3;
   
     }
 
     if (menuBarLevel == 3)
-    if(x < 160 && x > 110 && y > 715 && y < 735){
+    if(x < 160-8 && x > 110-10 && y > 715-36 && y < 735-36){
         ForthBarMenu();
         menuBarLevel = 4;
    
     }
 
     if (menuBarLevel == 4)
-    if(x < 210 && x > 160 && y > 695 && y < 715){
+    if(x < 210-8 && x > 160-10 && y > 695-36 && y < 715-36){
         FifthBarMenu();
         menuBarLevel = 5;
     }
@@ -1726,7 +1838,7 @@ if (TestNumber == 6 && start == true){
         if(menuBarLevel == 5 && registredForthTest == false){
             
         
-        if (x < 260 && x > 210 && y < 715 && y > 695){
+        if (x < 260-8 && x > 210-10 && y < 715-36 && y > 695-36){
             //console.log("CHECKFORTHTESTEND " + x + " y= " + y + " menubarlvl= " + menuBarLevel);
             /*
             mouseDownNumber++;
@@ -1740,24 +1852,20 @@ if (TestNumber == 6 && start == true){
             makeAllWhite = true;
             TestNumber = 7;
             menuBarOneTime = true;
-menuBarLevel = 0;
+            menuBarLevel = 0;
 
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255, 255, 255, 1)';
             ctx.fillRect(0, 0, 1600, 900);
         
 
-            ctx.font = "70px Arial";
+            ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākamā testa būs viss tāds pats, tikai drop-down ", 50, 100);
-            ctx.fillText("saraksta izmērī būs citādi", 50, 200);
-            ctx.fillText("Zemāk var redzēt ka tie izskatīsies.", 50, 300);
-            ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 50, 400);
+            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
+            ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
 
 
-            var eximg12 = document.getElementById("img12example");
-            //img.src = '/webpages_screenshots/meklešnas_lauks.png';
-            ctx.drawImage(eximg12, 700, 450, 238, 267);
+           
         }
     }
 }
@@ -1796,28 +1904,28 @@ if (TestNumber == 7 && start == true){
 
 
     if (menuBarLevel == 1)
-    if(x < 111 && x > 0 && y < 875 && y > 855){
+    if(x < 111-8 && x > 0 && y < 875-36 && y > 855-36){
         SecondBarMenu7thTest();
         menuBarLevel = 2;
    
     }
 
     if (menuBarLevel == 2)
-    if(x < 210 && x > 110 && y > 795 && y < 815){
+    if(x < 210-8 && x > 110-10 && y > 795-36 && y < 815-36){
         ThirdBarMenu7thTest();
         menuBarLevel = 3;
   
     }
 
     if (menuBarLevel == 3)
-    if(x < 310 && x > 210 && y > 715 && y < 735){
+    if(x < 310-8 && x > 210-10 && y > 715-36 && y < 735-36){
         ForthBarMenu7thTest();
         menuBarLevel = 4;
    
     }
 
     if (menuBarLevel == 4)
-    if(x < 410 && x > 310 && y > 695 && y < 715){
+    if(x < 410-8 && x > 310-10 && y > 695-36 && y < 715-36){
         FifthBarMenu7thTest();
         menuBarLevel = 5;
     }
@@ -1825,7 +1933,7 @@ if (TestNumber == 7 && start == true){
         if(menuBarLevel == 5 && registredForthTest == false){
             
         
-        if (x < 510 && x > 410 && y < 715 && y > 695){
+        if (x < 510-8 && x > 410-10 && y < 715-36 && y > 695-36){
             //console.log("CHECKFORTHTESTEND " + x + " y= " + y + " menubarlvl= " + menuBarLevel);
             /*
             mouseDownNumber++;
@@ -1848,16 +1956,11 @@ if (TestNumber == 7 && start == true){
 
             ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākamā testa būs viss tāds pats, tikai drop-down ", 50, 50);
-            ctx.fillText("saraksta izmērī atkal imainīti.", 50, 150);
-            ctx.fillText("Zemāk var redzēt ka tie izskatīsies.", 50, 200);
-            ctx.fillText("Bus laika ierobežojums 15 sekundes.", 50, 250);
-            ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 50, 300);
+            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
+            ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
 
 
-            var eximg12 = document.getElementById("img12example");
-            //img.src = '/webpages_screenshots/meklešnas_lauks.png';
-            ctx.drawImage(eximg12, 700, 450, 238, 267);
+           
         }
     }
 }
@@ -1898,28 +2001,28 @@ if (TestNumber == 8 && start == true){
 
 
     if (menuBarLevel == 1)
-    if(x < 111 && x > 0 && y < 908 && y > 895){
+    if(x < 111-8 && x > 0 && y < 908-38 && y > 895-36){
         SecondBarMenu8thTest();
         menuBarLevel = 2;
    
     }
 
     if (menuBarLevel == 2)
-    if(x < 210 && x > 110 && y > 865 && y < 878){
+    if(x < 210-8 && x > 110-10 && y > 865-36 && y < 878-38){
         ThirdBarMenu8thTest();
         menuBarLevel = 3;
   
     }
 
     if (menuBarLevel == 3)
-    if(x < 310 && x > 210 && y > 825 && y < 838){
+    if(x < 310-8 && x > 210-10 && y > 825-36 && y < 838-38){
         ForthBarMenu8thTest();
         menuBarLevel = 4;
    
     }
 
     if (menuBarLevel == 4)
-    if(x < 410 && x > 310 && y > 815 && y < 828){
+    if(x < 410-8 && x > 310-10 && y > 815-36 && y < 828-38){
         FifthBarMenu8thTest();
         menuBarLevel = 5;
     }
@@ -1927,7 +2030,7 @@ if (TestNumber == 8 && start == true){
         if(menuBarLevel == 5 && registredForthTest == false){
             
         
-        if (x < 510 && x > 410 && y < 826 && y > 815){
+        if (x < 510-8 && x > 410-10 && y < 826-36 && y > 815-36){
             console.log("CHECKFORTHTESTEND " + x + " y= " + y + " menubarlvl= " + menuBarLevel);
             /*
             mouseDownNumber++;
@@ -1937,12 +2040,12 @@ if (TestNumber == 8 && start == true){
            //88888
            console.log("EightTest: " + time8);
             registredForthTest = true;
-
-            
+            firstTest = false;
+            TestNumber = 0;
 
             start = false;
             makeAllWhite = true;
-            TestNumber = 9;
+
 
 
             ctx.beginPath();
@@ -1950,12 +2053,15 @@ if (TestNumber == 8 && start == true){
             ctx.fillRect(0, 0, 1600, 900);
             v = 0;
 
-            ctx.font = "70px Arial";
+
+            ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Pēdējais tests būs tāds", 50, 100);
-            ctx.fillText("pats, ka pirmais,", 50, 200);
-            ctx.fillText("tikai apļam būs dažādi izmērī. ", 50, 300);
-            ctx.fillText("Nospiediet start lai saktu pēdēju testu. ", 50, 400);
+            ctx.fillText(" ", 50, 50);
+            ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
+            ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
+            ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
+
+            
         }
     }
 }
@@ -1965,14 +2071,24 @@ if (TestNumber == 8 && start == true){
 });
 
 var count = 0;
+var calib = 0;
+var calib1 = 0;
+var calib2 = 0;
 
 
 document.addEventListener('mousedown', (e) => {
+    //callibrate
+    console.log("MousePos: " + x + ", " +  y);
+    Strikes[mouseDownNumber] = Strike;
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(0, 0, 255, 1)';
+    ctx.arc(x, 900 - y, 3, 0, 2 * Math.PI);
+    ctx.fill();
 
 //ForthTest
     if (start == true && forthTest == true && firstTest == false){
     if(menuBarLevel == 0)
-    if(coordsX[numb - 1] < 60 && coordsX[numb - 1] > 0 && coordsY[numb - 1] < 935 && coordsY[numb - 1] > 915){
+    if(coordsX[numb - 1] < 60 && coordsX[numb - 1] > 0 && coordsY[numb - 1] < 900 && coordsY[numb - 1] > 880){
         
         FirstBarMenu();
         menuBarLevel = 1;
@@ -1984,7 +2100,7 @@ document.addEventListener('mousedown', (e) => {
 if (start == true && TestNumber == 5){
     console.log("BAM");
     if(menuBarLevel == 0)
-    if(x < 60 && x > 0 && y < 935 && y > 915){
+    if(x < 60 && x > 0 && y < 900 && y > 880){
         
         FirstBarMenu();
         menuBarLevel = 1;
@@ -1996,7 +2112,7 @@ if (start == true && TestNumber == 5){
 if (start == true && TestNumber == 6){
     console.log("BAM");
     if(menuBarLevel == 0)
-    if(x < 60 && x > 0 && y < 935 && y > 915){
+    if(x < 60 && x > 0 && y < 900 && y > 880){
         
         FirstBarMenu();
         menuBarLevel = 1;
@@ -2008,7 +2124,7 @@ if (start == true && TestNumber == 6){
 if (start == true && TestNumber == 7){
     console.log("dfgnhnodfniohnjiodfsjxiohjdfjghiopdjfiohjopdfjhojdfijhio[jsfijdopsjhiopjdfopji[sjdfjh");
     if(menuBarLevel == 0)
-    if(x < 110 && x > 0 && y < 935 && y > 915){
+    if(x < 110 && x > 0 && y < 900 && y > 880){
         
         FirstBarMenu7thTest();
         menuBarLevel = 1;
@@ -2020,7 +2136,7 @@ if (start == true && TestNumber == 7){
 if (start == true && TestNumber == 8){
     console.log("BAM");
     if(menuBarLevel == 0)
-    if(x < 110 && x > 0 && y < 935 && y > 925){
+    if(x < 110 && x > 0 && y < 900 && y > 880){
         
         FirstBarMenu8thTest();
         menuBarLevel = 1;
@@ -2062,15 +2178,63 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
 
     //FirstTest
     if (start == true && secondTest == false && thirdTest == false && firstTest == true) {
+
+        if (calibrate < 5){
+
+            if (x < 30 && x > 0 && y > 900 - 30 && y < 900 - 0 && calibrate == 1){
+            calib++;
+            calib1++;
+            time = 0;
+            ctx.beginPath();
+            ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+            ctx.fillRect(0, 0, 1600, 900);
+            console.log("STRIKE CALIB");
+
+            }
+            if (x < 1600 && x > 1570 && y > 900 - 900 && y < 900 - 870 && calibrate == 2){
+                calib++;
+                calib2++;
+                time = 0;
+                ctx.beginPath();
+            ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+            ctx.fillRect(0, 0, 1600, 900);
+            console.log("STRIKE CALIB");
+
+                }
+                if (x < 30 && x > 0 && y > 900 - 30 && y < 900 - 0 && calibrate == 3){
+                    calib++;
+                    calib1++;
+                    time = 0;
+                    ctx.beginPath();
+            ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+            ctx.fillRect(0, 0, 1600, 900);
+            console.log("STRIKE CALIB");
+
+                    }
+                    if (x < 1600 && x > 1570 && y > 900 - 900 && y < 900 - 870 && calibrate == 4){
+                        time = 0;
+                        calib++;
+                        calib2;
+                        ctx.beginPath();
+            ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+            ctx.fillRect(0, 0, 1600, 900);
+            console.log("STRIKE CALIB");
+                        }
+                        
+            }
+            else{
+
+
     mouseDown[mouseDownNumber] = mouseDownNumber;
     times[mouseDownNumber] = time;
-    
-    Strikes[mouseDownNumber] = Strike;
 
+    console.log("Spawn: " + xSpawn + ", " + (900 - ySpawn) + "; mousCoords: " + x + ", " + y);
+    
+    
 
 
     // trapijuma regestrešana
-    if (coordsX[numb - 1] < xSpawn + 25 && coordsX[numb - 1] > xSpawn - 5 && coordsY[numb - 1] < 936 - ySpawn + 15 && coordsY[numb - 1] > 936 - ySpawn - 15 && oneTimeStriked == false) {
+    if (x < xSpawn + 15 && x > xSpawn - 15 && y < 900 - ySpawn + 15 && y > 900 - ySpawn - 15 && oneTimeStriked == false) {
         console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
         console.log("All click results ", times)
         Strike = true;
@@ -2098,7 +2262,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
     
 
     // merķa dzešana deļ trapijuma
-    if (coordsX[numb - 1] < xSpawn + 25 && coordsX[numb - 1] > xSpawn - 5 && coordsY[numb - 1] < 936 - ySpawn + 15 && coordsY[numb - 1] > 936 - ySpawn - 15) {
+    if (x < xSpawn + 15 && x > xSpawn - 15 && y < 900 - ySpawn + 15 && y > 900 - ySpawn - 15) {
 
         ctx.beginPath();
         ctx.fillStyle = 'rgba(255, 255, 255, 1)';
@@ -2111,40 +2275,47 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
     
         mouseDownNumber++;
     }
+    }
 
     //NineghthTest
 
     if (start == true && TestNumber == 9) {
-        mouseDown[mouseDownNumber] = mouseDownNumber;
-        times[mouseDownNumber] = time;
         
-        Strikes[mouseDownNumber] = Strike;
 
     
         // trapijuma regestrešana
-        if (x-10 < xSpawn + test9thSize[v] && x-10 > xSpawn - test9thSize[v] && y < 936 - ySpawn + test9thSize[v] && y > 936 - ySpawn - test9thSize[v] && oneTimeStriked == false) {
-            console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
-            console.log("All click results ", times)
+        if (x < xSpawn + test9thSize[v] && x > xSpawn - test9thSize[v] && y < 900 - ySpawn + test9thSize[v] && y > 900 - ySpawn - test9thSize[v] && oneTimeStriked == false) {
+            
             Strike = true;
             oneTimeStriked = true;
+            mouseDown[mouseDownNumber] = mouseDownNumber;
+        times[mouseDownNumber] = time;
+        
+        Strikes[mouseDownNumber] = Strike;
+        mouseDownNumber++;
+        time = 0;
+        console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+            console.log("All click results ", times)
         }
+    
         
     
-        time = 0;
-
+        
+        //console.log("x: " + x + " xSpawn + test9size: " + (xSpawn + test9thSize[v]) + ", " + (xSpawn - test9thSize[v]));
+        //console.log("y: " + y + " 900 - ySpawn + test9size: " + (900 - ySpawn + test9thSize[v]) + ", " + (900 - ySpawn - test9thSize[v]));
     
 
 
     ctx.beginPath();
     ctx.fillStyle = 'rgba(0, 0, 255, 1)';
-    ctx.arc(x-10, 936-y, 3, 0, 2 * Math.PI);
+    ctx.arc(x, 900-y, 3, 0, 2 * Math.PI);
     ctx.fill();
 
     
         
     
         // merķa dzešana deļ trapijuma
-        if (x-10 < xSpawn + test9thSize[v] && x-10 > xSpawn - test9thSize[v] && y < 936 - ySpawn + test9thSize[v] && y > 936 - ySpawn - test9thSize[v]) {
+        if (x < xSpawn + test9thSize[v] && x > xSpawn - test9thSize[v] && y < 900 - ySpawn + test9thSize[v] && y > 900 - ySpawn - test9thSize[v]) {
     
             ctx.beginPath();
             //ctx.strokeStyle = "white";
@@ -2155,7 +2326,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
        
         }
         
-            mouseDownNumber++;
+            
         }
 
 
@@ -2165,7 +2336,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
         
 
         // trapijuma regestrešana
-        if (coordsX[numb - 1] < xSpawnOfPlus + 50 && coordsX[numb - 1] > xSpawnOfPlus - 20 && coordsY[numb - 1] < 936 - ySpawnOfPlus + 32 && coordsY[numb - 1] > 936 - ySpawnOfPlus - 30 && oneTimeStriked == false) {
+        if (coordsX[numb - 1] < xSpawnOfPlus + 35 && coordsX[numb - 1] > xSpawnOfPlus - 35 && coordsY[numb - 1] < 900 - ySpawnOfPlus + 35 && coordsY[numb - 1] > 900 - ySpawnOfPlus - 35 && oneTimeStriked == false) {
             mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2174,15 +2345,16 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             Strike = true;
             oneTimeStriked = true;
             mouseDownNumber++;
+            time = 0;
 
         }
         
 
 
-        time = 0;
+        
         
         // merķis paliek sarkans, deļ tas trapišanas                                                                                                                                                                                                                                 oblīgati,o jo šeit ari veicas laika korektešana
-        if (coordsX[numb - 1] < xSpawnOfPlus + 40 && coordsX[numb - 1] > xSpawnOfPlus - 20 && coordsY[numb - 1]< 936 - ySpawnOfPlus + 32 && coordsY[numb - 1]> 936 - ySpawnOfPlus - 30 ) {
+        if (coordsX[numb - 1] < xSpawnOfPlus + 35 && coordsX[numb - 1] > xSpawnOfPlus - 35 && coordsY[numb - 1] < 900 - ySpawnOfPlus + 35 && coordsY[numb - 1] > 900 - ySpawnOfPlus - 35 ) {
 
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255, 0, 0, 1)';
@@ -2205,18 +2377,19 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
     }
 
     //ThirdTest
+    //3232
     if (start == true && secondTest == false && thirdTest == true && firstTest == false) {
 
-        thirdTestXLeft = [413, 819,    1250, 960, 1082, 1325, 1234, 990, 1053, 89, 680]; //2
-        thirdTestXRight = [780, 1180,  1480, 1295, 1235, 1579, 1289, 1127, 1220, 293, 1125]; //1
+        thirdTestXLeft = [413, 816,       1247, 955, 1077, 1317, 1180, 983, 1045, 82, 671]; //2
+        thirdTestXRight = [772, 1170,     1470, 1286, 1225, 1584, 1283, 1120, 1212, 285, 1117]; //1
 
-        thirdTestYDown = [822,  895, 181, 906, 886, 934, 707, 920, 643, 898]; //3
-        thirdTestYUp = [794,    862, 159, 885, 855, 838, 679, 874, 619, 862]; //4
+        thirdTestYDown = [752,  827, 125, 850, 824, 836, 643, 835, 582, 827]; //3
+        thirdTestYUp = [788,    857, 145,865, 850, 860, 674, 882, 604, 862]; //4
         
         
   
         if (counter == 1){
-            if(coordsX[numb - 1] < 780 && coordsX[numb - 1] > 413 && coordsY[numb - 1] < 822 && coordsY[numb - 1] > 794 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 772 && coordsX[numb - 1] > 413 && coordsY[numb - 1] < 788 && coordsY[numb - 1] > 752 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2230,7 +2403,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 oneTimeStriked = true;
 
             }
-            if(coordsX[numb - 1] < 1180 && coordsX[numb - 1] > 800 && coordsY[numb - 1] < 822 && coordsY[numb - 1] > 794 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1170 && coordsX[numb - 1] > 816 && coordsY[numb - 1] < 788 && coordsY[numb - 1] > 752 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2245,7 +2418,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 2){
-            if(coordsX[numb - 1] < 1480 && coordsX[numb - 1] > 1250 && coordsY[numb - 1] < 895 && coordsY[numb - 1] > 862 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1470 && coordsX[numb - 1] > 1247 && coordsY[numb - 1] < 857 && coordsY[numb - 1] > 827 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2260,7 +2433,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 3){
-            if(coordsX[numb - 1] < 1295 && coordsX[numb - 1] > 960 && coordsY[numb - 1] < 181 && coordsY[numb - 1] > 159 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1286 && coordsX[numb - 1] > 955 && coordsY[numb - 1] < 145 && coordsY[numb - 1] > 125 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2275,7 +2448,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 4){
-            if(coordsX[numb - 1] < 1235 && coordsX[numb - 1] > 1082 && coordsY[numb - 1] < 906 && coordsY[numb - 1] > 885 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1225 && coordsX[numb - 1] > 1077 && coordsY[numb - 1] < 865 && coordsY[numb - 1] > 850 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2290,7 +2463,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 5){
-            if(coordsX[numb - 1] < 1579 && coordsX[numb - 1] > 1325 && coordsY[numb - 1] < 886 && coordsY[numb - 1] > 860 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1584 && coordsX[numb - 1] > 1317 && coordsY[numb - 1] < 850 && coordsY[numb - 1] > 824 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2305,7 +2478,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 6){
-            if(coordsX[numb - 1] < 1289 && coordsX[numb - 1] > 1234 && coordsY[numb - 1] < 934 && coordsY[numb - 1] > 838 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1283 && coordsX[numb - 1] > 1180 && coordsY[numb - 1] < 860 && coordsY[numb - 1] > 836 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2320,7 +2493,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 7){
-            if(coordsX[numb - 1] < 1127 && coordsX[numb - 1] > 990 && coordsY[numb - 1] < 707 && coordsY[numb - 1] > 679 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1120 && coordsX[numb - 1] > 983 && coordsY[numb - 1] < 674 && coordsY[numb - 1] > 634 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2335,7 +2508,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 8){
-            if(coordsX[numb - 1] < 1220 && coordsX[numb - 1] > 1053 && coordsY[numb - 1] < 920 && coordsY[numb - 1] > 874 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1212 && coordsX[numb - 1] > 1045 && coordsY[numb - 1] < 882 && coordsY[numb - 1] > 835 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2350,7 +2523,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 9){
-            if(coordsX[numb - 1] < 293 && coordsX[numb - 1] > 89 && coordsY[numb - 1] < 643 && coordsY[numb - 1] > 619 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 285 && coordsX[numb - 1] > 82 && coordsY[numb - 1] < 604 && coordsY[numb - 1] > 582 && oneTimeStriked == false){
                 ctx.font = "160px Arial";
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
@@ -2365,7 +2538,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 10){
-            if(coordsX[numb - 1] < 1125 && coordsX[numb - 1] > 680 && coordsY[numb - 1] < 898 && coordsY[numb - 1] > 862 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1117 && coordsX[numb - 1] > 671 && coordsY[numb - 1] < 862 && coordsY[numb - 1] > 827 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2438,7 +2611,7 @@ document.getElementById("draw trajectory").addEventListener("click", function ()
 });
 
 function saveStaticDataToFile() {
-    var blob = new Blob([times, "\n" , "SpawnX: ", SaveSpawnX, "\n" , " SpawnY: ", SaveSpawnY, "\n" , " CursorX: ", SaveCursorX, "\n" , " CursorY: ", SaveCursorY, "\n", "ForthTest: ", time4, ", FifthTest: ", time5, ", SixthTest: ", time6, ", SeventhTest ", time7, ", EighthTest: ", time8],
+    var blob = new Blob([times, "\n" , "SpawnX: ", SaveSpawnX, "\n" , " SpawnY: ", SaveSpawnY, "\n" , " CursorX: ", SaveCursorX, "\n" , " CursorY: ", SaveCursorY, "\n", "ForthTest: ", time4, ", FifthTest: ", time5, ", SixthTest: ", time6, ", SeventhTest ", time7, ", EighthTest: ", time8, "\n", "Calibration: ", calib ,  "\n", "Calibration1: ", calib1 ,  "\n", "Calibration2: ", calib2],
         { type: "text/plain;charset=utf-8" });
     saveAs(blob, "static.txt");
 }
@@ -2447,6 +2620,55 @@ function saveStaticDataToFile() {
 
 document.getElementById("Save").addEventListener("click", function () {
     saveStaticDataToFile();
+});
+
+document.getElementById("v1").style.display = "none";
+document.getElementById("v2").style.display = "none";
+document.getElementById("v3").style.display = "none";
+
+
+document.getElementById("Show").addEventListener("click", function () {
+if (firstTest == true){
+    document.getElementById("v1").style.display = "block";
+    var elmnt1 = document.getElementById("v1");
+}
+if (TestNumber == 9){
+    document.getElementById("v2").style.display = "block";
+    var elmnt1 = document.getElementById("v2");
+}
+if (secondTest == true){
+    document.getElementById("v3").style.display = "block";
+    var elmnt1 = document.getElementById("v3");
+}
+if (thirdTest == true){
+    document.getElementById("v4").style.display = "block";
+    var elmnt1 = document.getElementById("v4");
+}
+if (forthTest == true || TestNumber == 5 || TestNumber == 6 || TestNumber == 7 || TestNumber == 8){
+    document.getElementById("v5").style.display = "block";
+    var elmnt1 = document.getElementById("v5");
+}
+
+    elmnt1.scrollIntoView();
+});
+
+document.getElementById("Hide").addEventListener("click", function () {
+    if (firstTest == true){
+    document.getElementById("v1").style.display = "none";
+    }
+    if (TestNumber == 9){
+        document.getElementById("v2").style.display = "none";
+    }
+    if (secondTest == true){
+        document.getElementById("v3").style.display = "none";
+    }
+    if (thirdTest == true){
+        document.getElementById("v4").style.display = "none";
+    }
+    if (forthTest == true || TestNumber == 5 || TestNumber == 6 || TestNumber == 7 || TestNumber == 8){
+        document.getElementById("v5").style.display = "none";
+    }
+    
 });
 
 function clearCoor() {
