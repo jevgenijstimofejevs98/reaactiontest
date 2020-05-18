@@ -1377,7 +1377,7 @@ if (makeAllWhite == true){
             ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 200);
             ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
             ctx.fillText("uz pastu brownsky98@gmail.com", 50, 300);
-            ctx.fillText("Vai spidiet pogu start lai izdarītu", 50, 350);
+            ctx.fillText("Vai spiediet pogu start lai izdarītu", 50, 350);
             ctx.fillText("papild testus.", 50, 400);
             ctx.fillText("Nākama testā jums jasaliek vārdu TIMER,", 50, 450);
             ctx.fillText("jo ātrāk, jo labāk.", 50, 500);
@@ -2082,10 +2082,12 @@ document.addEventListener('mousedown', (e) => {
     //callibrate
     console.log("MousePos: " + x + ", " +  y);
     Strikes[mouseDownNumber] = Strike;
+    /*
     ctx.beginPath();
     ctx.fillStyle = 'rgba(0, 0, 255, 1)';
     ctx.arc(x, 900 - y, 3, 0, 2 * Math.PI);
     ctx.fill();
+    */
 
 //ForthTest
     if (start == true && forthTest == true && firstTest == false){
@@ -2307,12 +2309,12 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
         //console.log("y: " + y + " 900 - ySpawn + test9size: " + (900 - ySpawn + test9thSize[v]) + ", " + (900 - ySpawn - test9thSize[v]));
     
 
-
+/*
     ctx.beginPath();
     ctx.fillStyle = 'rgba(0, 0, 255, 1)';
     ctx.arc(x, 900-y, 3, 0, 2 * Math.PI);
     ctx.fill();
-
+*/
     
         
     
