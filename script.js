@@ -92,7 +92,7 @@ function WriteAbout1stTest(){
         ctx.fillText("Pirmajā testā ar kursoru ir jānoklikšķina uz zaļajiem apļiem, jo", 50, 100);
         ctx.fillText("ātrāk, jo labāk.", 50, 150);
         ctx.fillText("Nospiediet start lai saktu pirmu testu. ", 50, 250);
-        ctx.fillText("Turiet Ctrl un nomēriet ar peles riteni tā, lai sarkanā rāmī un sākuma poga būtu redzama.", 50, 200);
+        ctx.fillText("Turiet Ctrl un nomēriet ar peles riteni tā, lai sarkanā rāmī un START poga būtu redzama.", 50, 200);
         ctx.fillText("Spiediet pogu show video lai uzzinātu vairāk.", 50, 300);
 
         document.addEventListener('DOMContentLoaded', function(){
