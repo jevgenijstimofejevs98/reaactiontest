@@ -2081,10 +2081,11 @@ document.addEventListener('mousedown', (e) => {
     //callibrate
     console.log("MousePos: " + x + ", " +  y);
     Strikes[mouseDownNumber] = Strike;
+    /*
     ctx.beginPath();
     ctx.fillStyle = 'rgba(0, 0, 255, 1)';
     ctx.arc(x, 900 - y, 3, 0, 2 * Math.PI);
-    ctx.fill();
+    ctx.fill();*/
 
 //ForthTest
     if (start == true && forthTest == true && firstTest == false){
@@ -2306,12 +2307,12 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
         //console.log("y: " + y + " 900 - ySpawn + test9size: " + (900 - ySpawn + test9thSize[v]) + ", " + (900 - ySpawn - test9thSize[v]));
     
 
-
+/*
     ctx.beginPath();
     ctx.fillStyle = 'rgba(0, 0, 255, 1)';
     ctx.arc(x, 900-y, 3, 0, 2 * Math.PI);
     ctx.fill();
-
+*/
     
         
     
