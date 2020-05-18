@@ -988,7 +988,7 @@ else {
             ctx.fillText("Nakamis tests būs tāds, pats", 50, 100);
             ctx.fillText("tikai apļam būs dažādi izmērī. ", 50, 200);
             ctx.fillText("Atkal spidiet start lai saktu nākamu testu. ", 50, 300);
-            ctx.fillText("Par katru uzdevumu ir video, spideiet show video.", 50, 400);
+            ctx.fillText("Par katru uzdevumu ir video, spiediet show video.", 50, 400);
 
 
            
