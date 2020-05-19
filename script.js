@@ -67,8 +67,8 @@ var registredForthTest = false;
 var firstTest = true;///true
 
 
-//firstTest = false;/////delete
-//forthTest = true;
+firstTest = false;/////delete
+thirdTest = true;
 var TestNumber = 0;//0
 
 //var functionforDubug = setInterval("IntervFuncForDebug()", 250);
@@ -812,14 +812,14 @@ if (time8 == 1500 && TestNumber == 8){
     registredForthTest = true;
     registredForthTest = true;
             firstTest = false;
-            TestNumber = 0;
+            TestNumber = 30;
 
             start = false;
             makeAllWhite = true;
 
     start = false;
     makeAllWhite = true;
-    TestNumber = 0;
+    TestNumber = 30;
     v = 0;
 
     ctx.beginPath();
@@ -831,8 +831,9 @@ if (time8 == 1500 && TestNumber == 8){
     ctx.fillStyle = 'rgba(0, 0, 0, 1)';
     ctx.fillText(" ", 50, 50);
     ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
-    ctx.fillText("uzspīediet uz pogu Save, un atsūtiet", 50, 250);
+    ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
     ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
+
 
 
     console.log("EightTest: " + time8);
@@ -1281,7 +1282,7 @@ if (makeAllWhite == true){
 
     //3232
 
-        //counter = 10;
+        //counter = 13;
         
     counter++;
         
@@ -1349,9 +1350,27 @@ if (makeAllWhite == true){
         //1188
         ctx.drawImage(img11, 0, 0, 1600, 900);
         }
+    if (counter == 11) { 
+        //SPAWN
+        var img2 = document.getElementById("img12");
+        //1188
+        ctx.drawImage(img12, 0, 0, 1600, 900);
+        }
+    if (counter == 12) { 
+        //SPAWN
+        var img2 = document.getElementById("img13");
+        //1188
+        ctx.drawImage(img13, 0, 0, 1600, 900);
+        }
+    if (counter == 13) { 
+        //SPAWN
+        var img2 = document.getElementById("img14");
+        //1188
+        ctx.drawImage(img14, 0, 0, 1600, 900);
+        }
 
     
-
+//webpagess
 
 
         
@@ -1365,7 +1384,7 @@ if (makeAllWhite == true){
     
     
         time = 0;
-        if (counter == 11) {
+        if (counter == 14) {
 
             start = false;
             secondTest = false;
@@ -2067,7 +2086,7 @@ if (TestNumber == 8 && start == true){
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText(" ", 50, 50);
             ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
-            ctx.fillText("uzspīediet uz pogu Save, un atsūtiet", 50, 250);
+            ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
             ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
 
             
@@ -2386,21 +2405,21 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
 
         
     }
-
+    //webpagess
     //ThirdTest
     //3232
     if (start == true && secondTest == false && thirdTest == true && firstTest == false) {
 
-        thirdTestXLeft = [413, 816,       1247, 955, 1077, 1317, 1180, 983, 1045, 82, 671]; //2
-        thirdTestXRight = [772, 1170,     1470, 1286, 1225, 1584, 1283, 1120, 1212, 285, 1117]; //1
+        thirdTestXLeft = [528, 1247, 20, 1077, 1317, 21, 983, 1045, 82, 671, 528, 481, 20]; //2
+        thirdTestXRight = [1105, 1470, 81, 1225, 1584, 82, 1120, 1212, 285, 1117, 1105, 911, 109]; //1
 
-        thirdTestYDown = [752,  827, 125, 850, 824, 836, 643, 835, 582, 827]; //3
-        thirdTestYUp = [788,    857, 145,865, 850, 860, 674, 882, 604, 862]; //4
+        thirdTestYDown = [849, 827, 813, 850, 824, 67, 643, 835, 582, 827, 854, 803, 816]; //4
+        thirdTestYUp = [880, 857, 840, 865, 850, 94, 674, 882, 604, 862, 883, 843, 836]; //3
         
         
   
         if (counter == 1){
-            if(coordsX[numb - 1] < 772 && coordsX[numb - 1] > 413 && coordsY[numb - 1] < 788 && coordsY[numb - 1] > 752 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1105 && coordsX[numb - 1] > 528 && coordsY[numb - 1] < 880 && coordsY[numb - 1] > 849 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2413,19 +2432,6 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 mouseDownNumber++;
                 oneTimeStriked = true;
 
-            }
-            if(coordsX[numb - 1] < 1170 && coordsX[numb - 1] > 816 && coordsY[numb - 1] < 788 && coordsY[numb - 1] > 752 && oneTimeStriked == false){
-                mouseDown[mouseDownNumber] = mouseDownNumber;
-            times[mouseDownNumber] = time;
-            Strikes[mouseDownNumber] = Strike;
-                ctx.font = "160px Arial";
-                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
-                ctx.fillText("Striked", 600, 450);
-                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
-                console.log("All click results ", times)
-                time = 0;
-                mouseDownNumber++;
-                oneTimeStriked = true;
             }
         }
         if (counter == 2){
@@ -2444,7 +2450,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 3){
-            if(coordsX[numb - 1] < 1286 && coordsX[numb - 1] > 955 && coordsY[numb - 1] < 145 && coordsY[numb - 1] > 125 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 81 && coordsX[numb - 1] > 20 && coordsY[numb - 1] < 840 && coordsY[numb - 1] > 813 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2489,7 +2495,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 6){
-            if(coordsX[numb - 1] < 1283 && coordsX[numb - 1] > 1180 && coordsY[numb - 1] < 860 && coordsY[numb - 1] > 836 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 82 && coordsX[numb - 1] > 21 && coordsY[numb - 1] < 94 && coordsY[numb - 1] > 67 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2561,6 +2567,54 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 time = 0;
                 mouseDownNumber++;
                 oneTimeStriked = true;
+            }
+        }
+        if (counter == 11){
+            if(coordsX[numb - 1] < 1105 && coordsX[numb - 1] > 528 && coordsY[numb - 1] < 883 && coordsY[numb - 1] > 854 && oneTimeStriked == false){
+                mouseDown[mouseDownNumber] = mouseDownNumber;
+            times[mouseDownNumber] = time;
+            Strikes[mouseDownNumber] = Strike;
+                ctx.font = "160px Arial";
+                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+                ctx.fillText("Striked", 600, 450);
+                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+                console.log("All click results ", times)
+                time = 0;
+                mouseDownNumber++;
+                oneTimeStriked = true;
+
+            }
+        }
+        if (counter == 12){
+            if(coordsX[numb - 1] < 911 && coordsX[numb - 1] > 483 && coordsY[numb - 1] < 843 && coordsY[numb - 1] > 803 && oneTimeStriked == false){
+                mouseDown[mouseDownNumber] = mouseDownNumber;
+            times[mouseDownNumber] = time;
+            Strikes[mouseDownNumber] = Strike;
+                ctx.font = "160px Arial";
+                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+                ctx.fillText("Striked", 600, 450);
+                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+                console.log("All click results ", times)
+                time = 0;
+                mouseDownNumber++;
+                oneTimeStriked = true;
+
+            }
+        }
+        if (counter == 13){
+            if(coordsX[numb - 1] < 109 && coordsX[numb - 1] > 20 && coordsY[numb - 1] < 836 && coordsY[numb - 1] > 816 && oneTimeStriked == false){
+                mouseDown[mouseDownNumber] = mouseDownNumber;
+            times[mouseDownNumber] = time;
+            Strikes[mouseDownNumber] = Strike;
+                ctx.font = "160px Arial";
+                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+                ctx.fillText("Striked", 600, 450);
+                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+                console.log("All click results ", times)
+                time = 0;
+                mouseDownNumber++;
+                oneTimeStriked = true;
+
             }
         }
     }
