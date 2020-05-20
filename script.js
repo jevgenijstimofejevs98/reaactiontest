@@ -85,6 +85,8 @@ function IntervFuncForDebug() {
 }
 var one = true;
 
+document.getElementById("block2").style.display = "none";
+
 function WriteAbout1stTest(){
     if (one == true){
         ctx.font = "20px Arial";
@@ -1442,6 +1444,8 @@ else{
             thirdTest = false;
             forthTest = true;
             TestNumber = 4;
+            
+            document.getElementById("block2").style.display = "block";
 
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255, 255, 255, 1)';
@@ -2125,6 +2129,7 @@ if (TestNumber == 8 && start == true){
             start = false;
             makeAllWhite = true;
 
+            document.getElementById("block2").style.display = "block";
 
 
             ctx.beginPath();
