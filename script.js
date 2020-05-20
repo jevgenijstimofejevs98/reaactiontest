@@ -836,6 +836,8 @@ if (time8 == 1500 && TestNumber == 8){
     ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
     ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
 
+    document.getElementById("block2").style.display = "block";
+
 
 
     console.log("EightTest: " + time8);
