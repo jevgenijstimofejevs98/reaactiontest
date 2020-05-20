@@ -67,8 +67,8 @@ var registredForthTest = false;
 var firstTest = true;///true
 
 
-firstTest = false;/////delete
-thirdTest = true;
+//firstTest = false;/////delete
+//thirdTest = true;
 var TestNumber = 0;//0
 
 //var functionforDubug = setInterval("IntervFuncForDebug()", 250);
@@ -853,6 +853,8 @@ if (time8 == 1500 && TestNumber == 8){
 
 document.getElementById("Start").addEventListener("click", function () {
     start = true;
+    document.getElementById("block1").style.display = "none";
+
     //if (secondTest == false)
     //console.clear();
 });
@@ -1264,7 +1266,19 @@ function NinghthTest() {
     }
 }
 
+var TheHundreth = Math.floor(Math.random() * 100);
+var rdtestVer = 1;
+var drtestVer = 1;
+    
+    if (TheHundreth > 50){
+        rdtestVer = 2;
+    }
 
+    if (TheHundreth > 32)
+        drtestVer = 2;
+    
+    if (TheHundreth > 62)
+        drtestVer = 3;
 
 function ThirdTest() {
 
@@ -1282,9 +1296,10 @@ if (makeAllWhite == true){
 
     //3232
 
-        //counter = 13;
+        //counter = 14;
         
     counter++;
+    
         
 
         oneTimePressSearch = false;
@@ -1292,27 +1307,51 @@ if (makeAllWhite == true){
 
     if (counter == 1) { 
     //SPAWN
+    if (rdtestVer == 1){
     var img2 = document.getElementById("img2");
             //1188
             ctx.drawImage(img2, 0, 0, 1600, 900);
     }
+    else{
+        var img12 = document.getElementById("img12");
+            //1188
+            ctx.drawImage(img12, 0, 0, 1600, 900);
+    }
+    }
     if (counter == 2) { 
-        //SPAWN
+        if (rdtestVer == 1){
         var img2 = document.getElementById("img3");
-        //1188
         ctx.drawImage(img3, 0, 0, 1600, 900);
+    }
+    else{
+        var img2 = document.getElementById("img17");
+        ctx.drawImage(img17, 0, 0, 1600, 900);
+    }
         }
     if (counter == 3) { 
-        //SPAWN
-        var img2 = document.getElementById("img4");
-        //1188
-        ctx.drawImage(img4, 0, 0, 1600, 900);
+        if (drtestVer == 1){
+            var img2 = document.getElementById("img4");
+            ctx.drawImage(img4, 0, 0, 1600, 900);
+        }
+        if (drtestVer == 2){
+            var img2 = document.getElementById("img7");
+            ctx.drawImage(img7, 0, 0, 1600, 900);
+        }
+
+        if (drtestVer == 3){
+            var img2 = document.getElementById("img14");
+            ctx.drawImage(img14, 0, 0, 1600, 900);
+        }
         }
     if (counter == 4) { 
-        //SPAWN
+        if (rdtestVer == 1){
         var img2 = document.getElementById("img5");
-        //1188
         ctx.drawImage(img5, 0, 0, 1600, 900);
+    }
+    else{
+        var img2 = document.getElementById("img19");
+        ctx.drawImage(img19, 0, 0, 1600, 900);
+    }
         }
     if (counter == 5) { 
         //SPAWN
@@ -1321,52 +1360,64 @@ if (makeAllWhite == true){
         ctx.drawImage(img6, 0, 0, 1600, 900);
         }
     if (counter == 6) { 
-        //SPAWN
-        var img2 = document.getElementById("img7");
-        //1188
-        ctx.drawImage(img7, 0, 0, 1600, 900);
+        if (rdtestVer == 1){
+        var img2 = document.getElementById("img8");
+        ctx.drawImage(img8, 0, 0, 1600, 900);
+    }
+else{
+        var img2 = document.getElementById("img25");
+        ctx.drawImage(img25, 0, 0, 1600, 900);
+    }
         }
     if (counter == 7) { 
-        //SPAWN
-        var img2 = document.getElementById("img8");
-        //1188
-        ctx.drawImage(img8, 0, 0, 1600, 900);
-        }
-    if (counter == 8) { 
-        //SPAWN
         var img2 = document.getElementById("img9");
-        //1188
         ctx.drawImage(img9, 0, 0, 1600, 900);
         }
+    if (counter == 8) { 
+        if(rdtestVer == 1){ 
+            var img2 = document.getElementById("img10");
+            ctx.drawImage(img10, 0, 0, 1600, 900);
+        }
+        else{
+            var img2 = document.getElementById("img24");
+            ctx.drawImage(img24, 0, 0, 1600, 900);
+        }
+    }
     if (counter == 9) { 
-        //SPAWN
-        var img2 = document.getElementById("img10");
-        //1188
-        ctx.drawImage(img10, 0, 0, 1600, 900);
+        if (rdtestVer == 1){
+            var img2 = document.getElementById("img11");
+            ctx.drawImage(img11, 0, 0, 1600, 900);
         }
+        else{
+            var img2 = document.getElementById("img26");
+            ctx.drawImage(img26, 0, 0, 1600, 900);
+        }
+    }
     if (counter == 10) { 
-        //SPAWN
-        var img2 = document.getElementById("img11");
-        //1188
-        ctx.drawImage(img11, 0, 0, 1600, 900);
-        }
-    if (counter == 11) { 
-        //SPAWN
-        var img2 = document.getElementById("img12");
-        //1188
-        ctx.drawImage(img12, 0, 0, 1600, 900);
-        }
-    if (counter == 12) { 
-        //SPAWN
         var img2 = document.getElementById("img13");
-        //1188
         ctx.drawImage(img13, 0, 0, 1600, 900);
         }
+    if (counter == 11) { 
+        if (rdtestVer == 1){
+            var img2 = document.getElementById("img21");
+            ctx.drawImage(img21, 0, 0, 1600, 900);
+        }
+        else{
+            var img2 = document.getElementById("img23");
+            ctx.drawImage(img23, 0, 0, 1600, 900);
+        }
+        }
+    if (counter == 12) { 
+            var img2 = document.getElementById("img15"); //steam(2009)
+            ctx.drawImage(img15, 0, 0, 1600, 900);
+        }
     if (counter == 13) { 
-        //SPAWN
-        var img2 = document.getElementById("img14");
-        //1188
-        ctx.drawImage(img14, 0, 0, 1600, 900);
+            var img2 = document.getElementById("img16"); //amazon(2001)
+            ctx.drawImage(img16, 0, 0, 1600, 900);
+        }
+    if (counter == 14) { 
+            var img2 = document.getElementById("img22"); //amazon(2001)
+            ctx.drawImage(img22, 0, 0, 1600, 900);
         }
 
     
@@ -1384,7 +1435,7 @@ if (makeAllWhite == true){
     
     
         time = 0;
-        if (counter == 14) {
+        if (counter == 15) {
 
             start = false;
             secondTest = false;
@@ -2419,6 +2470,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
         
   
         if (counter == 1){
+            if (rdtestVer ==1){
             if(coordsX[numb - 1] < 1105 && coordsX[numb - 1] > 528 && coordsY[numb - 1] < 880 && coordsY[numb - 1] > 849 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
@@ -2434,7 +2486,26 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
 
             }
         }
+        else{
+
+            if(coordsX[numb - 1] < 1105 && coordsX[numb - 1] > 528 && coordsY[numb - 1] < 883 && coordsY[numb - 1] > 854 && oneTimeStriked == false){
+                mouseDown[mouseDownNumber] = mouseDownNumber;
+            times[mouseDownNumber] = time;
+            Strikes[mouseDownNumber] = Strike;
+                ctx.font = "160px Arial";
+                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+                ctx.fillText("Striked", 600, 450);
+                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+                console.log("All click results ", times)
+                time = 0;
+                mouseDownNumber++;
+                oneTimeStriked = true;
+
+            }
+        }
+        }
         if (counter == 2){
+            
             if(coordsX[numb - 1] < 1470 && coordsX[numb - 1] > 1247 && coordsY[numb - 1] < 857 && coordsY[numb - 1] > 827 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
@@ -2448,9 +2519,11 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 mouseDownNumber++;
                 oneTimeStriked = true;
             }
+       
         }
         if (counter == 3){
-            if(coordsX[numb - 1] < 81 && coordsX[numb - 1] > 20 && coordsY[numb - 1] < 840 && coordsY[numb - 1] > 813 && oneTimeStriked == false){
+            if (drtestVer == 1 || drtestVer == 3){
+            if (coordsX[numb - 1] < 106 && coordsX[numb - 1] > 20 && coordsY[numb - 1] < 840 && coordsY[numb - 1] > 813 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2464,8 +2537,24 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 oneTimeStriked = true;
             }
         }
+            else {
+            if (coordsX[numb - 1] < 82 && coordsX[numb - 1] > 21 && coordsY[numb - 1] < 94 && coordsY[numb - 1] > 67 && oneTimeStriked == false){
+                    mouseDown[mouseDownNumber] = mouseDownNumber;
+                    times[mouseDownNumber] = time;
+                    Strikes[mouseDownNumber] = Strike;
+                    ctx.font = "160px Arial";
+                    ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+                    ctx.fillText("Striked", 600, 450);
+                    console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+                    console.log("All click results ", times)
+                    time = 0;
+                    mouseDownNumber++;
+                    oneTimeStriked = true;
+                }
+            }
+        }
         if (counter == 4){
-            if(coordsX[numb - 1] < 1225 && coordsX[numb - 1] > 1077 && coordsY[numb - 1] < 865 && coordsY[numb - 1] > 850 && oneTimeStriked == false){
+            if(coordsX[numb - 1] < 1230 && coordsX[numb - 1] > 1072 && coordsY[numb - 1] < 868 && coordsY[numb - 1] > 852 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2495,21 +2584,6 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
             }
         }
         if (counter == 6){
-            if(coordsX[numb - 1] < 82 && coordsX[numb - 1] > 21 && coordsY[numb - 1] < 94 && coordsY[numb - 1] > 67 && oneTimeStriked == false){
-                mouseDown[mouseDownNumber] = mouseDownNumber;
-            times[mouseDownNumber] = time;
-            Strikes[mouseDownNumber] = Strike;
-                ctx.font = "160px Arial";
-                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
-                ctx.fillText("Striked", 600, 450);
-                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
-                console.log("All click results ", times)
-                time = 0;
-                mouseDownNumber++;
-                oneTimeStriked = true;
-            }
-        }
-        if (counter == 7){
             if(coordsX[numb - 1] < 1120 && coordsX[numb - 1] > 983 && coordsY[numb - 1] < 674 && coordsY[numb - 1] > 634 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
@@ -2524,7 +2598,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 oneTimeStriked = true;
             }
         }
-        if (counter == 8){
+        if (counter == 7){
             if(coordsX[numb - 1] < 1212 && coordsX[numb - 1] > 1045 && coordsY[numb - 1] < 882 && coordsY[numb - 1] > 835 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
@@ -2539,8 +2613,9 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 oneTimeStriked = true;
             }
         }
-        if (counter == 9){
-            if(coordsX[numb - 1] < 285 && coordsX[numb - 1] > 82 && coordsY[numb - 1] < 604 && coordsY[numb - 1] > 582 && oneTimeStriked == false){
+        if (counter == 8){
+            if (rdtestVer == 1){
+            if(coordsX[numb - 1] < 343 && coordsX[numb - 1] > 98 && coordsY[numb - 1] < 631 && coordsY[numb - 1] > 609 && oneTimeStriked == false){
                 ctx.font = "160px Arial";
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
@@ -2554,7 +2629,23 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 oneTimeStriked = true;
             }
         }
-        if (counter == 10){
+        else{
+            if(coordsX[numb - 1] < 345 && coordsX[numb - 1] > 97 && coordsY[numb - 1] < 795 && coordsY[numb - 1] > 775 && oneTimeStriked == false){
+                ctx.font = "160px Arial";
+                mouseDown[mouseDownNumber] = mouseDownNumber;
+            times[mouseDownNumber] = time;
+            Strikes[mouseDownNumber] = Strike;
+                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+                ctx.fillText("Striked", 600, 450);
+                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+                console.log("All click results ", times)
+                time = 0;
+                mouseDownNumber++;
+                oneTimeStriked = true;
+            }
+        }
+        }
+        if (counter == 9){
             if(coordsX[numb - 1] < 1117 && coordsX[numb - 1] > 671 && coordsY[numb - 1] < 862 && coordsY[numb - 1] > 827 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
@@ -2569,23 +2660,7 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 oneTimeStriked = true;
             }
         }
-        if (counter == 11){
-            if(coordsX[numb - 1] < 1105 && coordsX[numb - 1] > 528 && coordsY[numb - 1] < 883 && coordsY[numb - 1] > 854 && oneTimeStriked == false){
-                mouseDown[mouseDownNumber] = mouseDownNumber;
-            times[mouseDownNumber] = time;
-            Strikes[mouseDownNumber] = Strike;
-                ctx.font = "160px Arial";
-                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
-                ctx.fillText("Striked", 600, 450);
-                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
-                console.log("All click results ", times)
-                time = 0;
-                mouseDownNumber++;
-                oneTimeStriked = true;
-
-            }
-        }
-        if (counter == 12){
+        if (counter == 10){
             if(coordsX[numb - 1] < 911 && coordsX[numb - 1] > 483 && coordsY[numb - 1] < 843 && coordsY[numb - 1] > 803 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
@@ -2601,8 +2676,8 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
 
             }
         }
-        if (counter == 13){
-            if(coordsX[numb - 1] < 109 && coordsX[numb - 1] > 20 && coordsY[numb - 1] < 836 && coordsY[numb - 1] > 816 && oneTimeStriked == false){
+        if (counter == 11){
+            if(coordsX[numb - 1] < 1288 && coordsX[numb - 1] > 954 && coordsY[numb - 1] < 142 && coordsY[numb - 1] > 122 && oneTimeStriked == false){
                 mouseDown[mouseDownNumber] = mouseDownNumber;
             times[mouseDownNumber] = time;
             Strikes[mouseDownNumber] = Strike;
@@ -2614,10 +2689,57 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
                 time = 0;
                 mouseDownNumber++;
                 oneTimeStriked = true;
-
-            }
         }
     }
+        if (counter == 12){
+            if(coordsX[numb - 1] < 133 && coordsX[numb - 1] > 13 && coordsY[numb - 1] < 609 && coordsY[numb - 1] > 588 && oneTimeStriked == false){
+                mouseDown[mouseDownNumber] = mouseDownNumber;
+            times[mouseDownNumber] = time;
+            Strikes[mouseDownNumber] = Strike;
+                ctx.font = "160px Arial";
+                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+                ctx.fillText("Striked", 600, 450);
+                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+                console.log("All click results ", times)
+                time = 0;
+                mouseDownNumber++;
+                oneTimeStriked = true;
+        }
+        }
+        if (counter == 13){
+            if(coordsX[numb - 1] < 558 && coordsX[numb - 1] > 426 && coordsY[numb - 1] < 866 && coordsY[numb - 1] > 843 && oneTimeStriked == false){
+                mouseDown[mouseDownNumber] = mouseDownNumber;
+            times[mouseDownNumber] = time;
+            Strikes[mouseDownNumber] = Strike;
+                ctx.font = "160px Arial";
+                ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+                ctx.fillText("Striked", 600, 450);
+                console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+                console.log("All click results ", times)
+                time = 0;
+                mouseDownNumber++;
+                oneTimeStriked = true;
+        }
+
+            }
+            if (counter == 14){
+                if(coordsX[numb - 1] < 1203 && coordsX[numb - 1] > 227 && coordsY[numb - 1] < 892 && coordsY[numb - 1] > 851 && oneTimeStriked == false){
+                    mouseDown[mouseDownNumber] = mouseDownNumber;
+                times[mouseDownNumber] = time;
+                Strikes[mouseDownNumber] = Strike;
+                    ctx.font = "160px Arial";
+                    ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+                    ctx.fillText("Striked", 600, 450);
+                    console.log("Mousedown number: ", mouseDownNumber, "Pressed on time: ", time, " sek/100, Striked, target count: ", targetCount)
+                    console.log("All click results ", times)
+                    time = 0;
+                    mouseDownNumber++;
+                    oneTimeStriked = true;
+            }
+    
+                }
+        }
+    
         
     //Forth Test Last letter mousedown
     if (start == true && forthTest == true && firstTest == false){
@@ -2676,7 +2798,8 @@ document.getElementById("draw trajectory").addEventListener("click", function ()
 });
 
 function saveStaticDataToFile() {
-    var blob = new Blob([times, "\n" , "SpawnX: ", SaveSpawnX, "\n" , " SpawnY: ", SaveSpawnY, "\n" , " CursorX: ", SaveCursorX, "\n" , " CursorY: ", SaveCursorY, "\n", "ForthTest: ", time4, ", FifthTest: ", time5, ", SixthTest: ", time6, ", SeventhTest ", time7, ", EighthTest: ", time8, "\n", "Calibration: ", calib ,  "\n", "Calibration1: ", calib1 ,  "\n", "Calibration2: ", calib2],
+    var blob = new Blob([times, "\n" , "SpawnX: ", SaveSpawnX, "\n" , " SpawnY: ", SaveSpawnY, "\n" , " CursorX: ", SaveCursorX, "\n" , " CursorY: ", SaveCursorY, "\n", "ForthTest: ", time4, ", FifthTest: ", time5, ", SixthTest: ", time6, ", SeventhTest ", time7, ", EighthTest: ", time8, "\n", "Calibration: ", calib ,  "\n", "Calibration1: ", calib1 ,  "\n", "Calibration2: ", calib2,  "\n", "ThirdTestVariant: ", rdtestVer, ", ", drtestVer, 
+"\n", pele, "\n", operatajsistema, "\n", HowOften, "\n", Temp, "\n", coordination, "\n", sport],
         { type: "text/plain;charset=utf-8" });
     saveAs(blob, "static.txt");
 }
@@ -2756,6 +2879,78 @@ document.getElementById("Hide").addEventListener("click", function () {
     document.getElementById("v5").style.display = "none";
     }
     
+});
+
+var pele;
+var operatajsistema;
+var HowOften;
+var Temp;
+var coordination;
+var sport;
+
+
+document.getElementById("Submit").addEventListener("click", function () {
+    if (document.getElementById("irPele").checked == true){
+        pele = "pele Ir";
+    }
+    if (document.getElementById("nauPeles").checked == true){
+        pele = "peles nau";
+    }
+
+    if (document.getElementById("Windows").checked == true){
+        operatajsistema = "Windows";
+    }
+    if (document.getElementById("MacOS").checked == true){
+        operatajsistema = "MacOS";
+    }
+    if (document.getElementById("Linux").checked == true){
+        operatajsistema = "Linux";
+    }
+
+    if (document.getElementById("Nekad").checked == true){
+        HowOften = "Nekad";
+    }
+    if (document.getElementById("Vienu reizi divas nedēļas").checked == true){
+        HowOften = "One time per teo weeks";
+    }
+    if (document.getElementById("Katru nedēļu").checked == true){
+        HowOften = "Every week";
+    }
+    if (document.getElementById("Katru dienu").checked == true){
+        HowOften = "Every day";
+    }
+
+    if (document.getElementById("IrTemp").checked == true){
+        Temp = "Temperature";
+    }
+    if (document.getElementById("NauTemp").checked == true){
+        Temp = "No temperature";
+    }
+
+    if (document.getElementById("IrKordTrauc").checked == true){
+        coordination = "Coordination troubles";
+    }
+    if (document.getElementById("NauKordTrauc").checked == true){
+        coordination = "No coordination troubles";
+    }
+
+    if (document.getElementById("IrSport").checked == true){
+        sport = "Sport";
+    }
+    if (document.getElementById("NauSport").checked == true){
+        sport = "No sport";
+    }
+
+    document.getElementById("Submit").style.display = "none";
+    document.getElementById("irPele").style.display = "none";
+    document.getElementById("nauPeles").style.display = "none";
+    document.getElementById("label1").style.display = "none";
+    document.getElementById("label2").style.display = "none";
+
+    document.getElementById("block1").style.display = "none";
+
+   
+
 });
 
 function clearCoor() {
