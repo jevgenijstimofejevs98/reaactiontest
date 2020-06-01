@@ -17,6 +17,7 @@ var n = setInterval("targetCounter()", 10);
 var j = setTimeout("ForthTest()", 100);
 var Ninetht = setInterval("NinghthTest()", 2000);
 var tw = setTimeout("WriteAbout1stTest()", 100);
+var justTIMER = setInterval("JustTimer()", 100);
 
 //var IntervalFuvcForDebug = setInterval("IntervFuncForDebug()", 500);
 
@@ -63,6 +64,8 @@ var menuBarOneTime = true;
 var menuBarLevel = 0;
 var listCloseTimer = 0;
 var registredForthTest = false;
+var TotalTime;
+var canvashyperlink = false;
 
 var firstTest = true;///true
 
@@ -72,7 +75,10 @@ var firstTest = true;///true
 var TestNumber = 0;//0
 
 //var functionforDubug = setInterval("IntervFuncForDebug()", 250);
-function IntervFuncForDebug() {
+function JustTimer() {
+
+    TotalTime++;
+
     /////DEBUG/////
 
     //console.log("time:", time);
@@ -261,6 +267,7 @@ function stopWatch() {
             }
         //ForthTest
         if (start == true && firstTest == false && forthTest == true) {
+            canvashyperlink = false;
             
             time4++ 
             if (cursorIsOutside == true){timeCloseDropDownList++;}
@@ -275,20 +282,16 @@ function stopWatch() {
 
                 
 
-//console.log("menuBarlvl " + menuBarLevel + "MaxLevel " + MaxDropDownListLevel);
+
             if (menuBarLevel == 2 && MaxDropDownListLevel == menuBarLevel)
-            //if(x < 61 && x > 0 && y < 875 && y > 855 || x < 110 && x > 60 && y > 775 && y < 875){listCloseTimer = 0; cursorIsOutside = false;}
             if(x < 46 && x > 0 && y < 875-36 && y > 855-36 || x < 110-8 && x > 60-15 && y > 775-36 && y < 875-36){listCloseTimer = 0; cursorIsOutside = false;}
             else{
-                //listCloseTimer++;
                 cursorIsOutside = true;
                 if (listCloseTimer == 6){
                 menuBarLevel = 1;
                 ctx.beginPath();
-                    //ctx.strokeStyle = "white";
                     ctx.fillStyle = 'rgba(255, 255, 255, 1)';
                     ctx.fillRect(51, 0, 1499, 900);
-                    
                     ctx.beginPath();
                     ctx.fillStyle = 'rgba(255, 255, 255, 1)';
                     ctx.fillRect(0, 101, 1600, 834);
@@ -834,11 +837,14 @@ if (time8 == 1500 && TestNumber == 8){
     ctx.fillText(" ", 50, 50);
     ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
     ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
-    ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
+    ctx.fillStyle = 'rgba(0, 0, 255, 1)';
+    ctx.fillText("uz pastu brownsky98@gmail.com", 50, 350);
+    ctx.fillStyle = 'rgba(0, 0, 0, 1)';
+    canvashyperlink = true;
 
     document.getElementById("block2").style.display = "block";
 
-
+    canvashyperlink1 = true;
 
     console.log("EightTest: " + time8);
     registredForthTest = true;
@@ -1459,7 +1465,9 @@ else{
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 200);
             ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
+            ctx.fillStyle = 'rgba(0, 0, 255, 1)';
             ctx.fillText("uz pastu brownsky98@gmail.com", 50, 300);
+            ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText("Vai spiediet pogu start lai izdarītu", 50, 350);
             ctx.fillText("papild testus.", 50, 400);
             ctx.fillText("Nākama testā jums jasaliek vārdu TIMER,", 50, 450);
@@ -1469,7 +1477,7 @@ else{
 
            
 
-
+           canvashyperlink = true;
 
 
 
@@ -1518,7 +1526,7 @@ function ForthTest() {
         ctx.rect(0, 0, 50, 20);
         ctx.stroke();
         
-        
+        canvashyperlink = false;
 
         
 
@@ -1582,6 +1590,18 @@ c.addEventListener('mousemove', function(evt) {
     //y = height - e.pageY;
     y = 900 - mousePos.YY;
     
+
+    if (canvashyperlink == true){
+        if (x > 50 && x < 360 && y > 590 && y < 620 && canvashyperlink1 == false){
+            document.getElementById("output").style.cursor = "pointer";
+        }
+      //  else{document.getElementById("output").style.cursor = "auto";}
+        if (x > 50 && x < 806 && y > 530 && y < 580 && canvashyperlink1 == true){
+            document.getElementById("output").style.cursor = "pointer";
+        }
+       // else{document.getElementById("output").style.cursor = "auto";}
+    }
+    else{document.getElementById("output").style.cursor = "auto";}
 
  
 
@@ -2132,7 +2152,8 @@ if (TestNumber == 8 && start == true){
             makeAllWhite = true;
 
             document.getElementById("block2").style.display = "block";
-
+            canvashyperlink = true;
+            canvashyperlink1 = true;
 
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255, 255, 255, 1)';
@@ -2145,7 +2166,10 @@ if (TestNumber == 8 && start == true){
             ctx.fillText(" ", 50, 50);
             ctx.fillText("Paldies par jūsu uzmanību un sadarbību, lūdzu", 50, 150);
             ctx.fillText("uzspīdiet uz pogu Save, un atsūtiet", 50, 250);
-            ctx.fillText("uz pastu brownsky98@gmail.com", 5, 350);
+            ctx.fillStyle = 'rgba(0, 0, 255, 1)';
+            ctx.fillText("uz pastu brownsky98@gmail.com", 50, 350);
+            canvashyperlink1 = true;
+            
 
             
         }
@@ -2155,6 +2179,8 @@ if (TestNumber == 8 && start == true){
 
 
 });
+
+var canvashyperlink1 = false;
 
 var count = 0;
 var calib = 0;
@@ -2363,6 +2389,17 @@ if(firstTest == true || secondTest == true || thirdTest == true || TestNumber ==
     
         mouseDownNumber++;
     }
+    }
+
+
+    //end hyperlink inside canvas
+    if (canvashyperlink == true){
+        if (x > 50 && x < 360 && y > 590 && y < 620){
+            window.open('mailto:brownsky98@gmail.com');
+        }
+        if (x > 50 && x < 806 && y > 530 && y < 580 && canvashyperlink1 == true){
+            window.open('mailto:brownsky98@gmail.com');
+        }
     }
 
     //NineghthTest
@@ -2806,15 +2843,23 @@ document.getElementById("draw trajectory").addEventListener("click", function ()
 
 function saveStaticDataToFile() {
     var blob = new Blob([times, "\n" , "SpawnX: ", SaveSpawnX, "\n" , " SpawnY: ", SaveSpawnY, "\n" , " CursorX: ", SaveCursorX, "\n" , " CursorY: ", SaveCursorY, "\n", "ForthTest: ", time4, ", FifthTest: ", time5, ", SixthTest: ", time6, ", SeventhTest ", time7, ", EighthTest: ", time8, "\n", "Calibration: ", calib ,  "\n", "Calibration1: ", calib1 ,  "\n", "Calibration2: ", calib2,  "\n", "ThirdTestVariant: ", rdtestVer, ", ", drtestVer, 
-"\n", pele, "\n", operatajsistema, "\n", HowOften, "\n", Temp, "\n", coordination, "\n", sport],
+"\n", pele, "\n", operatajsistema, "\n", HowOften, "\n", Temp, "\n", coordination, "\n", sport, "\n", "TotalTime: ", TotalTime],
         { type: "text/plain;charset=utf-8" });
     saveAs(blob, "static.txt");
+
+    anchor = document.createElement('a');
+
+anchor.download = "hello.txt";
+anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
+anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
+anchor.click();
 }
 
 
 
 document.getElementById("Save").addEventListener("click", function () {
     saveStaticDataToFile();
+    
 });
 
 document.getElementById("v1").style.display = "none";
