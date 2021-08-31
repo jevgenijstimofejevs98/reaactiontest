@@ -99,7 +99,7 @@ function WriteAbout1stTest(){
         ctx.fillStyle = 'rgba(0, 0, 0, 1)';
         ctx.fillText("Pirmajā testā ar kursoru ir jānoklikšķina uz zaļajiem apļiem, jo", 50, 100);
         ctx.fillText("ātrāk, jo labāk.", 50, 150);
-        ctx.fillText("Nospiediet start lai saktu pirmu testu. ", 50, 250);
+        ctx.fillText("Nospiediet start lai saktu pirmo testu. ", 50, 250);
         ctx.fillText("Turiet Ctrl un nomēriet ar peles riteni tā, lai sarkanā rāmī un sākuma poga būtu redzama.", 50, 200);
         ctx.fillText("Spiediet pogu show video lai uzzinātu vairāk.", 50, 300);
 
@@ -1008,7 +1008,8 @@ else {
             ctx.fillText("Nakamis tests būs tāds, pats", 50, 100);
             ctx.fillText("tikai apļam būs dažādi izmērī. ", 50, 200);
             ctx.fillText("Atkal spidiet start lai saktu nākamu testu. ", 50, 300);
-            ctx.fillText("Par katru uzdevumu ir video, spideiet show video.", 50, 400);
+            ctx.fillText("Par katru uzdevumu ir video,", 50, 400);
+            ctx.fillText("nospiedziet pogu show video.", 50, 500);
 
 
            
@@ -1468,9 +1469,9 @@ else{
             ctx.fillStyle = 'rgba(0, 0, 255, 1)';
             ctx.fillText("uz pastu brownsky98@gmail.com", 50, 300);
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Vai spiediet pogu start lai izdarītu", 50, 350);
+            ctx.fillText("Vai nospiedziet pogu start lai izdarītu", 50, 350);
             ctx.fillText("papild testus.", 50, 400);
-            ctx.fillText("Nākama testā jums jasaliek vārdu TIMER,", 50, 450);
+            ctx.fillText("Nākama testā jums jāsaliek vārdu TIMER,", 50, 450);
             ctx.fillText("jo ātrāk, jo labāk.", 50, 500);
            // ctx.fillText("Nospiediet start lai saktu nākamu testu. ", 5, 350);
 
@@ -1763,7 +1764,7 @@ c.addEventListener('mousemove', function(evt) {
             ctx.font = "35px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText("Būs vēl četri tādā veida uzdevumi", 50, 50);
-            ctx.fillText("Nākamā uzdevumā Jums jasaliek vārdu TIMER,", 50, 100);
+            ctx.fillText("Nākamā uzdevumā Jums jāsaliek vārdu TIMER,", 50, 100);
             ctx.fillText("jo ātrāk, jo labāk.", 50, 150);
             //ctx.fillText("Nospiediet start lai sāktu nākamo testu. ", 50, 330);
 
@@ -1966,7 +1967,7 @@ if (TestNumber == 6 && start == true){
 
             ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākama jums jasaliek vārdu TIMER,", 50, 50);
+            ctx.fillText("Nākama jums jāsaliek vārdu TIMER,", 50, 50);
             ctx.fillText("jo ātrāk, jo labāk.", 50, 150);
 
 
@@ -2061,7 +2062,7 @@ if (TestNumber == 7 && start == true){
 
             ctx.font = "50px Arial";
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
-            ctx.fillText("Nākamā Jums jasaliek vārdu TIMER,", 50, 50);
+            ctx.fillText("Nākamā Jums jāsaliek vārdu TIMER,", 50, 50);
             ctx.fillText("jo ātrāk, jo labāk.", 50, 120);
 
 
@@ -2165,7 +2166,7 @@ if (TestNumber == 8 && start == true){
             ctx.fillStyle = 'rgba(0, 0, 0, 1)';
             ctx.fillText(" ", 50, 50);
             ctx.fillText("Paldies par Jūsu uzmanību un sadarbību, lūdzu", 50, 150);
-            ctx.fillText("uzspiediet uz pogu Save, un atsūtiet", 50, 250);
+            ctx.fillText("nospiedziet uz pogu Save, un atsūtiet", 50, 250);
             ctx.fillStyle = 'rgba(0, 0, 255, 1)';
             ctx.fillText("uz pastu brownsky98@gmail.com", 50, 350);
             canvashyperlink1 = true;
